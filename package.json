@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://Tripoli80.github.io/ice-creame",
+  "homepage": "https://tripoli80.github.io/ice-creame",
   "scripts": {
     "dev": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /ice-creame/"
