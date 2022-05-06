@@ -1,0 +1,114 @@
+.products__title {
+    margin-bottom: 148px;
+    font-family: $font-titel;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;    
+    color: $color-font-red;
+}
+
+.products__subtitle {
+    margin-bottom: 15px;    
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-font-span;
+}
+
+.cards__item {    
+    padding: 160px 39px 40px 41px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 280px;
+    border-radius: 24px;
+    
+    &:not(:last-child) {
+        margin-bottom: 140px;
+    }
+
+    // @media screen and (min-width: 480px) {
+    //     width: 280px;
+    // }
+    
+    &:nth-child(1) {
+        background-color: #FFB8CA;
+    }
+
+    &:nth-child(2) {
+        background-color: #F0D1A5;
+    }
+
+    &:nth-child(3) {
+        background-color: #C2E297;
+    }
+}
+
+.cards__title {
+    position: relative;
+    margin-bottom: 70px;
+    font-family: $font-titel;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.15;    
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;    
+    color: $color-font-white;
+
+    &::after {
+        position: absolute;
+        right: 50%;
+        bottom: -35px;
+        transform: translateX(50%);        
+        content: '';
+        width: 26px;
+        height: 6px;                
+        background-image: image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
+        background-image: -webkit-image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
+    }
+}
+
+.cards__desc {
+    margin-bottom: 32px;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;    
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-font-white;
+}
+
+.btn-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;    
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: $color-font-white;
+    transition: background-color .3s cubic-bezier(0.4, 0, 0.2, 1), 
+    fill .3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+        background-color: $color-font-red;        
+    }
+
+    &:hover .btn-circle__icon, 
+    &:focus .btn-circle__icon {
+        fill: $color-font-white;
+    }
+}
+
+.btn-circle__icon {
+    width: 16px;
+    height: 16px;
+    fill: $color-font-red;
+    transition: fill .3s cubic-bezier(0.4, 0, 0.2, 1);    
+}
