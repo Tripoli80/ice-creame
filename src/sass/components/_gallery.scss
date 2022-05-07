@@ -1,0 +1,11 @@
+.gallery {
+    display: flex;
+
+    &__thumb {display: block;}
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
