@@ -1,0 +1,36 @@
+
+
+.button{
+    //можна винести в плейсхолдер або селектор тегу button
+    font-family: inherit;
+    border-radius: 22px;
+    padding: 12px 37px 11px 37px;
+    ///////
+}
+
+
+.red-button{
+    color: $red-btn-txt;
+        background-color: $red-btn-bgc;
+    
+        &:hover,
+        &:focus {
+            background-color: $red-btn-bgc--active;
+        }
+}
+
+
+.white-button{
+    color: $white-btn-txt;
+    background-color: $white-btn-bgc;
+    
+        &:hover,
+        &:focus {
+            background-color: $white-btn-bgc--active;
+        }
+    }
+
+.button__icon{
+    margin-left: 13px;
+}
+
