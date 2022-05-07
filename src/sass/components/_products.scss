@@ -90,9 +90,12 @@
     transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); 
     
     &:not(:last-child) {
-        @media screen and (max-width: 767.9px) {
-            margin-bottom: 140px;
-        }        
+        @include mq(mobile-only) {
+                margin-bottom: 140px;
+            }
+        // @media screen and (max-width: 767.9px) {
+        //     margin-bottom: 140px;
+        // }        
     }
 
     @media screen and (max-width: 767.9px) {
