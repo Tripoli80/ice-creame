@@ -1,15 +1,11 @@
 
-
-.button{
-    //можна винести в плейсхолдер або селектор тегу button
-    font-family: inherit;
+.red-button{
+  //для плейсхолдера
+font-family: inherit;
     border-radius: 22px;
     padding: 12px 37px 11px 37px;
-    ///////
-}
+    ////
 
-
-.red-button{
     color: $red-btn-txt;
         background-color: $red-btn-bgc;
     
@@ -21,6 +17,12 @@
 
 
 .white-button{
+    //для плейсхолдера
+        font-family: inherit;
+        border-radius: 22px;
+        padding: 12px 37px 11px 37px;
+        ////
+
     color: $white-btn-txt;
     background-color: $white-btn-bgc;
     
