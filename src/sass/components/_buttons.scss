@@ -25,7 +25,8 @@ $white-btn-bgc--active: #ECEBEB;
     color: $red-btn-txt;
         background-color: $red-btn-bgc;
     
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $red-btn-bgc--active;
         }
 }
@@ -35,7 +36,8 @@ $white-btn-bgc--active: #ECEBEB;
     color: $white-btn-txt;
     background-color: $white-btn-bgc;
     
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $white-btn-bgc--active;
         }
     }
