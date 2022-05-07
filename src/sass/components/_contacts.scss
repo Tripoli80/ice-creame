@@ -1,3 +1,6 @@
+.contacts {
+  background-color: #fff5f6;
+}
 .wrapper {
   display: inline-block;
   padding: 37px 32px 37px 32px;
@@ -102,4 +105,30 @@
   line-height: 1.5;
 
   color: $color-font-second;
+}
+.list__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+.list__btn {
+  display: inline-block;
+  min-width: 161px;
+  min-height: 44px;
+
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+
+  border-radius: 22px;
+
+  &--red {
+    color: $color-font-white;
+    background-color: $color-font-red;
+  }
+  &--white {
+    color: $color-font-red;
+    background-color: $color-font-white;
+  }
 }
