@@ -1,5 +1,5 @@
 .contacts {
-  background-color: #fff5f6;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 245, 246, 1));
 }
 .wrapper {
   display: inline-block;
@@ -62,7 +62,7 @@
     content: '';
     margin-top: 24px;
     margin-bottom: 24px;
-    width: 216px;
+    min-width: 216px;
     height: 1px;
     background-color: #e1e1e1;
   }
@@ -73,7 +73,7 @@
     content: '';
     margin-top: 14px;
     margin-bottom: 24px;
-    width: 216px;
+    min-width: 216px;
     height: 1px;
     background-color: #e1e1e1;
   }
@@ -107,6 +107,10 @@
   color: $color-font-second;
 }
 .list__item {
+  max-width: 161px;
+  margin-left: auto;
+  margin-right: auto;
+
   &:not(:last-child) {
     margin-bottom: 10px;
   }
@@ -124,11 +128,22 @@
   border-radius: 22px;
 
   &--red {
+    margin-top: 12px;
+
     color: $color-font-white;
     background-color: $color-font-red;
   }
+  &--red:hover,
+  &--red:focus {
+    background-color: #c7133e;
+  }
+
   &--white {
     color: $color-font-red;
     background-color: $color-font-white;
+  }
+  &--white:hover,
+  &--white:focus {
+    background-color: #ecebeb;
   }
 }
