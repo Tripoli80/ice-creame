@@ -48,8 +48,28 @@
   visibility: hidden;
 
   /*  Установаем ширину окна  */
-  width: 100%;
-  max-width: 500px;
+  // width: 100%;
+  // max-width: 500px;
+
+  //moe
+  min-width: 320px;
+  @include mq(mobile) {
+    // width: calc(100% - 2 * 15px);
+    width: 50%;
+    max-width: 450px;
+  }
+  @include mq(tablet) {
+    width: 450px;
+    // height: 581px;
+    max-width: none;
+
+    // min-height: 400px;
+  }
+  @include mq(desktop) {
+    width: 528px;
+    // height: 581px;
+    max-width: none;
+  }
 
   /*  Центрируем и задаем z-index */
   position: fixed;
@@ -61,10 +81,13 @@
   /*  Побочные стили   */
   box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
   text-align: center;
-  padding: 30px;
+  padding: 40px;
+
   border-radius: 3px;
-  background-color: #fff;
-  transition: 0.3s all;
+  // background-color: #fff;
+  background-color: $main-color;
+
+  transition: 0.25s all;
 }
 
 /* Стили для активных классов подложки и окна */

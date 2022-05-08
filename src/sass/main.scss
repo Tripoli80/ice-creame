@@ -7,6 +7,8 @@
 @import './example';
 @import './basis/var';
 @import './utils/mixin';
+@import './utils/placeholder';
+
 
 @import './basis/default';
 @import './basis/reset';
@@ -26,5 +28,4 @@
 // Buttons
 @import './components/buttons';
 @import './components/modal';
-
-
+@import './components/popap';
