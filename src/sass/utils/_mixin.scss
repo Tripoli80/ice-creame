@@ -1,3 +1,20 @@
+@mixin flex-3in1 ($display: flex, $align-items: center, $justify-content: center) {
+    display: $display;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin flex-gap ($display: flex, $justify-content: center, $gap: 30px) {
+    display: $display;    
+    justify-content: $justify-content;    
+    gap: $gap;
+}
+
+@mixin section-class ($padding-top: 60px, $padding-bottom: 60px) {
+    padding: $padding-top 0 $padding-bottom 0;
+}
+
+
 @mixin mq($screen) {
     $mobile: 480px;
     $tablet: 768px;

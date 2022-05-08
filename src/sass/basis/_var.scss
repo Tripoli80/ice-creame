@@ -3,26 +3,27 @@ $mobile: 480px;
 $tablet: 768px;
 $desktop: 1280px;
 
-$main-color: #FFB8CA;
-$menu-color: #E17992;
-$second-color: #FFA5BA;
+$main-color: #ffb8ca;
 
+// about, _advantages, galery gradient, foter , contact
+$section-color: #fff5f6;
 
-$font-primary: "DM Sans";
-$font-primary-rezerv: "sans-serif";
-$font-titel: "Titan One";
+$menu-color: #e17992;
+$second-color: #ffa5ba;
 
+$font-primary: 'DM Sans';
+$font-primary-rezerv: 'sans-serif';
+$font-titel: 'Titan One';
 
 $color-font-main: #000000;
-$color-font-second: #907E82;
-$color-font-calendar: #FFA5BA;
+$color-font-second: #907e82;
+$color-font-calendar: #ffa5ba;
 
-$color-font-red: #D41443;
-$color-font-white:  #FFFFFF;
-;
-$color-font-span:  #FFA5BA;
-;
+$color-font-red: #d41443;
+$color-font-white: #ffffff;
+$color-font-span: #ffa5ba; 
 
+// <<<<<<< feature/products
 //products-cards-bg
 $card-1-front-bg: #FFB8CA;
 $card-1-back-bg: #ffd2dd;
@@ -30,3 +31,17 @@ $card-2-front-bg: #F0D1A5;
 $card-2-back-bg: #f4dcbb;
 $card-3-front-bg: #C2E297;
 $card-3-back-bg: #cee8ab;
+
+
+// Buttons
+
+///змінні
+$red-btn-txt: #FFFFFF;
+$red-btn-bgc: #D41443;
+$red-btn-bgc--active: #C7133E;
+
+$white-btn-txt: #D41443;
+$white-btn-bgc: #FFFFFF;
+$white-btn-bgc--active: #ECEBEB;
+
+

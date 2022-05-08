@@ -1,0 +1,38 @@
+
+.red-button{
+  //для плейсхолдера
+font-family: inherit;
+    border-radius: 22px;
+    padding: 12px 37px 11px 37px;
+    ////
+
+    color: $red-btn-txt;
+        background-color: $red-btn-bgc;
+    
+        &:hover,
+        &:focus {
+            background-color: $red-btn-bgc--active;
+        }
+}
+
+
+.white-button{
+    //для плейсхолдера
+        font-family: inherit;
+        border-radius: 22px;
+        padding: 12px 37px 11px 37px;
+        ////
+
+    color: $white-btn-txt;
+    background-color: $white-btn-bgc;
+    
+        &:hover,
+        &:focus {
+            background-color: $white-btn-bgc--active;
+        }
+    }
+
+.button__icon{
+    margin-left: 13px;
+}
+

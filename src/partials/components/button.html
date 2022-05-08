@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="section">
+        <h2>Зразок кнопок, special для команди</h2>
+        
+        <p>Щоб використати оформлення додайте кнопці клас "red-button" або "white-button"</p>
+        
+        
+        <button class="red-button">Read more</button>
+        <button class="white-button">Read more</button>
+        
+        <h3>Кнопки зі стрілками</h3>
+        <p>Стандартний відступ іконки - задайте тегу SVG - клас "button__icon"</p>
+
+        <p>Шлях до іконок: </p>
+        <p>use href="./images/icons.svg#icon-red-button"</p>
+        <p>use href="./images/icons.svg#icon-white-button"</p>
+        
+        <button class="red-button">Read more
+            <svg class="button__icon" width="7px" height="10px">
+                <use href="./images/icons.svg#icon-red-button"></use>
+            </svg>
+        </button>
+        
+        <button class="white-button">Read more
+            <svg class="button__icon" width="7px" height="10px">
+                <use href="./images/icons.svg#icon-white-button"></use>
+            </svg>
+        </button>
+
+        <p>Щоб задати свої налаштування (наприклад щоб перебити pading) - додайте в тег button свій унікальний клас</p>
+    </div>
+</div>
