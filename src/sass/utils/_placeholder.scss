@@ -8,8 +8,8 @@
 }
 
  %trans{ 
-  transition-duration: var(--time);
-  transition-timing-function: var(--functional-cubic);
+  transition-duration: $time;
+  transition-timing-function: $functional-cubic;
  }
 
  
