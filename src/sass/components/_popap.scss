@@ -147,8 +147,7 @@
   border: 0;
 }
 .modal-form__legaltxt {
-font-family: $font-primary;
-
+  font-family: $font-primary;
 
   // display: block;
   // vertical-align: middle;
@@ -156,7 +155,7 @@ font-family: $font-primary;
 
 .modal-form__legal {
   /* display: block; */
-font-family: $font-primary;
+  font-family: $font-primary;
   font-size: 12px;
   line-height: 14px;
   @include mq(tablet) {
