@@ -1,9 +1,139 @@
 .gallery {
+    margin-left: auto;
+    margin-right: auto;
+
     display: flex;
+    
+    max-height: 430px;
+
+    @media screen and (max-width: 767px) {
+        gap: 2px;
+        padding: 0 15px;
+    }
+
+    @media screen and (min-width: 768px) {
+        gap: 4px;
+    }
+
+    @media screen and (min-width: 1280px) {
+        gap: 6px;
+    }
+
+    
+
+    background-image: linear-gradient(to bottom,
+        #FFF5F6 40%,
+        #fff 40%,
+        #fff 65%);
+
+    justify-content: center;
+    align-items: center;
 
     &__column {
-            display: flex;
-            flex-direction: column;
-        }
-}
 
+        &--first {
+            @media screen and (max-width: 767px) {
+                padding-top: 10px;
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-top: 15px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                padding-top: 20px;
+            }
+        }
+
+        &--third {
+            @media screen and (max-width: 767px) {
+                padding-top: 25px;
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-top: 30px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                padding-top: 35px;
+            }
+        }
+
+        &--fourth {
+            @media screen and (max-width: 767px) {
+                padding-bottom: 10px;
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-bottom: 15px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    &__item {
+        display: block;
+    }
+
+    &__thumb {
+        // border: 1px solid teal;
+        border-radius: 15%;
+        overflow: hidden;
+
+        &--changed {
+            @media screen and (max-width: 767px) {
+                max-width: 40px;
+            }
+
+            @media screen and (min-width: 768px) {
+                max-width: 86px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                max-width: 139px;
+            }
+        }
+
+        &--rotated {
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2px;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 4px;
+            }
+
+            @media screen and (min-width: 1280px) {
+                margin-bottom: 6px;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            animation: addGalleryAnime 1550ms infinite 100ms;
+
+            @keyframes addGalleryAnime {
+                0% {
+                    transform: scale(1);
+                }
+                // 25% {
+                //     transform: scale(1.12);
+                // }
+
+                50% {
+                    transform: scale(1.25);
+                }
+                // 75% {
+                //     transform: scale(1.12);
+                // }
+
+                100% {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
