@@ -1,0 +1,9 @@
+.gallery {
+    display: flex;
+
+    &__column {
+            display: flex;
+            flex-direction: column;
+        }
+}
+
