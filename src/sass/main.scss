@@ -6,10 +6,12 @@
 // Стили для файла с примером HTML-фрагмента
 @import './example';
 @import './basis/var';
+@import './utils/mixin';
+@import './utils/placeholder';
+
+
 @import './basis/default';
 @import './basis/reset';
-@import './utils/mixin';
-
 
 @import './components/header';
 @import './components/hero';
@@ -21,12 +23,9 @@
 @import './components/contacts';
 @import './components/footer';
 
+@import './components/title';
 
-
-
-
-
-
-
-
-
+// Buttons
+@import './components/buttons';
+@import './components/modal';
+@import './components/popap';

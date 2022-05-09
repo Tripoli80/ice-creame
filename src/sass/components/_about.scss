@@ -1,0 +1,181 @@
+.about-section {
+
+@include section-class(40px,40px);
+
+
+@include mq(tablet){
+    @include section-class(20px, 80px);
+}
+
+@include mq(desktop) {
+    @include section-class(60px, 40px);
+}
+
+background-color: $section-color;
+
+}
+
+.about-overlay{
+background-repeat: no-repeat;
+background-size: contain;
+      
+//// Ретінізація фонових зображень + підтримка формату webp
+  @include mq(mobile-only) {
+    background-position: 0px 578px;
+    
+    ////574px відняти 40px padding (версія для макету 320px)
+    // background-position: 0px 534px;
+   
+    background-image: url(../images/about/s/bgi-milk.png);
+    background-image: -webkit-image-set(
+      url(../images/about/s/bgi-milk.webp) 1x
+    );
+    @include mq(retina) {
+      background-image: url(../images/about/s/bgi-milk@2x.png);
+      background-image: -webkit-image-set(
+        url(../images/about/s/bgi-milk@2x.webp) 2x
+      );
+    }
+  }
+
+  @include mq(desktop) {
+    background-position: 0px 195px;
+      ////255px відняти 60px padding
+
+    background-image: url(../images/about/l/bgi-milk.png);
+    background-image: -webkit-image-set(
+      url(../images/about/l/bgi-milk.webp) 1x
+    );
+    @include mq(retina) {
+      background-image: url(../images/about/l/bgi-milk@2x.png);
+      background-image: -webkit-image-set(
+        url(../images/about/l/bgi-milk@2x.webp) 2x
+      );
+    }
+  }
+  ///////////Ретінізація...////
+}
+
+
+.about__content{
+  margin-top: 32px;
+
+
+  @include mq(tablet) {
+    display: flex;
+
+        margin-top: 40px;
+        }
+
+  @include mq(desktop) {
+        margin-top: 60px;
+        }
+
+}
+
+.about__image{
+    display: block;
+    height: auto;
+
+    @include mq(mobile-only) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(100% - 10px);
+      }
+
+  // max-width: 280px;
+
+    @include mq(tablet) {
+          max-width: 336px;
+        }
+
+    @include mq(desktop) {
+          max-width: 501px;
+        }
+}
+
+.about__text{
+    margin-top: 40px;
+
+    margin-left: 5px;
+    max-width: calc(100% - 70px);
+
+    @media screen and (min-width: 400px){
+      margin-left: 30px;
+      max-width: calc(100% - 90px);
+    }
+
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+
+    color: $color-font-second;
+
+    @include mq(tablet) {
+      margin-left: 32px;
+      max-width: 334px;
+      }
+    
+      @include mq(desktop) {
+        margin-top: 90px;
+        margin-left: 139px;
+        max-width: 463px;
+      }
+
+    &-first{
+        color: $color-font-main;
+
+        @include mq(tablet) {
+              font-size: 14px;
+              line-height: 1.76;
+          }
+
+
+        @include mq(desktop) {
+            letter-spacing: 0.04em;
+          }
+
+    }
+
+    &-medium{
+        margin-top: 24px;
+
+        @include mq(tablet) {
+          margin-top: 20px;
+
+              font-size: 16px;
+              line-height: 1.76;
+              letter-spacing: 0.04em;
+          }
+
+
+        @include mq(desktop) {
+          margin-top: 32px;
+              font-size: 14px;
+              line-height: 1.94;
+          }
+        
+    }
+}
+
+.about__button{
+    margin-top: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+
+    @include mq(tablet) {
+      margin-top: 40px;
+          font-size: 16px;
+          line-height: 1.31;
+      } 
+}
+
+// Модалка
+
+.modal--white,
+.section__subtitle.modal--white{
+  color: $color-font-white;
+}

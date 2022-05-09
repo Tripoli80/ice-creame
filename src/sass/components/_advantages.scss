@@ -1,0 +1,62 @@
+.advantages {
+  background-color: $section-color;
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include mq(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    width: 230px;
+
+    @include mq(tablet) {
+      width: 180px;
+    }
+    @include mq(desktop) {
+      width: 288px;
+    }
+    &:not(:last-child) {
+      @include mq(mobile) {
+        margin-bottom: 32px;
+      }
+      @include mq(tablet-only) {
+        margin-right: 22px;
+      }
+      @include mq(desktop) {
+        margin-right: 165px;
+      }
+    }
+  }
+
+  //   &__item:not(:last-child) {
+  //     @include mq(mobile) {
+  //       margin-bottom: 32px;
+  //     }
+  //   }
+
+  &__pic {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  &__calc {
+    color: $color-font-red;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.13em;
+    letter-spacing: 0.04em;
+
+    margin-bottom: 15px;
+    opacity: 0;
+  }
+  &__descripton {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+  }
+}

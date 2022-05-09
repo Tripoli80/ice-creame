@@ -1,0 +1,32 @@
+
+.red-button{
+    @extend %button;
+    @extend %trans;
+
+    color: $red-btn-txt;
+        background-color: $red-btn-bgc;
+    
+        &:hover,
+        &:focus {
+            background-color: $red-btn-bgc--active;
+        }
+}
+
+
+.white-button{
+    @extend %button;
+    @extend %trans;
+   
+    color: $white-btn-txt;
+    background-color: $white-btn-bgc;
+
+        &:hover,
+        &:focus {
+            background-color: $white-btn-bgc--active;
+        }
+    }
+
+.button__icon{
+    margin-left: 13px;
+}
+

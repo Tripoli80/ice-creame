@@ -1,0 +1,124 @@
+.a-btn {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #414b52;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+}
+.flex-btn {
+  outline: auto;
+  @include mq(mobile-only) {
+    @include section-class(200px, 60px);
+  }
+  @include mq(tablet) {
+    @include section-class();
+  }
+  @include mq(desktop) {
+    @include section-class();
+  }
+
+  @include flex-3in1();
+  @include flex-gap();
+}
+
+/* Стили для подложки */
+
+.overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+/* Стили для модальных окон */
+
+.modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+  /*  Установаем ширину окна  */
+  // width: 100%;
+  // max-width: 500px;
+
+  //moe
+  min-width: 320px;
+  @include mq(mobile) {
+    // width: calc(100% - 2 * 15px);
+    width: 50%;
+    max-width: 450px;
+  }
+  @include mq(tablet) {
+    width: 450px;
+    // height: 581px;
+    max-width: none;
+
+    // min-height: 400px;
+  }
+  @include mq(desktop) {
+    width: 528px;
+    // height: 581px;
+    max-width: none;
+  }
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 40px;
+
+  border-radius: 3px;
+  // background-color: #fff;
+  background-color: $main-color;
+
+  transition: 0.25s all;
+}
+
+/* Стили для активных классов подложки и окна */
+
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.modaltest {
+  background-color: $main-color;
+}
+.modaltest a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #414b52;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+}
