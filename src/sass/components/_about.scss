@@ -162,7 +162,12 @@ background-size: contain;
 
 // Модалка
 
-.modal--white,
+.about__text.modal--white,
 .section__subtitle.modal--white{
+  color: $color-font-white;
+}
+
+.about__title.modal--white{
+  margin-top: 15px;
   color: $color-font-white;
 }
