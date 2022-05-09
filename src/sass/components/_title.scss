@@ -1,4 +1,4 @@
-.section__title{
+.section__title {
     font-family: $font-titel;
     font-weight: 400;
     font-size: 34px;
@@ -24,9 +24,12 @@
 .section__subtitle{
     display: block;
     margin-bottom: 15px;
-
+    font-family: $font-titel;
+    font-weight: 400;
     font-size: 18px;
     line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
     color: $color-font-span;
     
     @include mq(tablet){
