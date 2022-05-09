@@ -77,3 +77,82 @@
     <!-- <button  class="closed-modal" data-modal-close >закрыть</button> -->
   </div>
 </div>
+<div class="modal" data-modal="6">
+  <div class="modal-container">
+    <p class="modal-container__title">Order ice cream</p>
+    <form name="modal-form" class="modal-form">
+      <div class="modal-form__item">
+        <label for="modal-form__name" class="modal-form__lable">Name</label>
+        <div class="modal-form__box">
+          <input
+            type="text"
+            name="modal-form__name"
+            class="modal-form__input modal-form__name"
+            id="modal-form__name"
+            placeholder=""
+          />
+          <svg class="modal-form__icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-modal-people"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="modal-form__item">
+        <label for="modal-form__tel" class="modal-form__lable">Phone number</label>
+        <div class="modal-form__box">
+          <input
+            type="tel"
+            name="modal-form__tel"
+            class="modal-form__input modal-form__tel"
+            id="modal-form__tel"
+            placeholder=""
+          />
+          <svg class="modal-form__icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-modal-phone"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="modal-form__item">
+        <label for="modal-form-mail" class="modal-form__lable">Почта</label>
+        <div class="modal-form__box">
+          <input
+            type="mail"
+            name="modal-form-mail"
+            class="modal-form__input modal-form-mail"
+            id="modal-form-mail"
+            placeholder=""
+          />
+          <svg class="modal-form__icon" width="18px" height="18px">
+            <use href="./images/icons.svg#icon-modal-mail"></use>
+          </svg>
+        </div>
+      </div>
+
+      <div class="modal-form__checkbox">
+        <input
+          type="checkbox"
+          class="modal-form__check"
+          id="modal-form__check"
+          name="modal-form__check"
+          placeholder=""
+        />
+        <label for="modal-form__check" class="modal-form__check-lable"
+          > <span class="modal-form__legaltxt"> Соглашаюсь с рассылкой и принимаю</span>
+         </label>
+          <a class="modal-form__legal" href="#">
+            <span >Условия договора</span>
+          </a>
+      </div>
+      <button type="submit" class="red-button modal-form__centr">
+        <span class="modal-form__buttonname">Отправить</span>
+      </button>
+    </form>
+
+    <button type="button" class="modal-container__closed" data-modal-close>
+      <svg class="modal-container__icon js-modal-close">
+        <use href="./images/icons.svg#icon-modal-closed"></use>
+      </svg>
+    </button>
+    <!-- <button  class="closed-modal" data-modal-close >закрыть</button> -->
+  </div>
+</div>
