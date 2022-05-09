@@ -1,21 +1,18 @@
-.about-section {
+.about__section {
+  background-color: $section-color;
 
-@include section-class(40px,40px);
-
+@include section-class(40px,20px);
 
 @include mq(tablet){
-    @include section-class(20px, 80px);
+    @include section-class(20px, 40px);
 }
 
 @include mq(desktop) {
-    @include section-class(60px, 40px);
+    @include section-class(60px, 20px);
+}
 }
 
-background-color: $section-color;
-
-}
-
-.about-overlay{
+.about__overlay{
 background-repeat: no-repeat;
 background-size: contain;
       
@@ -23,9 +20,6 @@ background-size: contain;
   @include mq(mobile-only) {
     background-position: 0px 578px;
     
-    ////574px відняти 40px padding (версія для макету 320px)
-    // background-position: 0px 534px;
-   
     background-image: url(../images/about/s/bgi-milk.png);
     background-image: -webkit-image-set(
       url(../images/about/s/bgi-milk.webp) 1x
@@ -40,7 +34,6 @@ background-size: contain;
 
   @include mq(desktop) {
     background-position: 0px 195px;
-      ////255px відняти 60px padding
 
     background-image: url(../images/about/l/bgi-milk.png);
     background-image: -webkit-image-set(
@@ -60,11 +53,9 @@ background-size: contain;
 .about__content{
   margin-top: 32px;
 
-
   @include mq(tablet) {
     display: flex;
-
-        margin-top: 40px;
+    margin-top: 40px;
         }
 
   @include mq(desktop) {
@@ -83,8 +74,6 @@ background-size: contain;
         max-width: calc(100% - 10px);
       }
 
-  // max-width: 280px;
-
     @include mq(tablet) {
           max-width: 336px;
         }
@@ -94,16 +83,10 @@ background-size: contain;
         }
 }
 
-.about__text{
+.about__textContent{
     margin-top: 40px;
-
     margin-left: 5px;
     max-width: calc(100% - 70px);
-
-    @media screen and (min-width: 400px){
-      margin-left: 30px;
-      max-width: calc(100% - 90px);
-    }
 
     font-family: 'DM Sans';
     font-weight: 500;
@@ -111,6 +94,11 @@ background-size: contain;
     line-height: 1.62;
 
     color: $color-font-second;
+
+    @media screen and (min-width: 400px) {
+        margin-left: 30px;
+        max-width: calc(100% - 90px);
+      }
 
     @include mq(tablet) {
       margin-left: 32px;
@@ -123,43 +111,42 @@ background-size: contain;
         max-width: 463px;
       }
 
-    &-first{
-        color: $color-font-main;
-
-        @include mq(tablet) {
-              font-size: 14px;
-              line-height: 1.76;
-          }
-
-
-        @include mq(desktop) {
-            letter-spacing: 0.04em;
-          }
-
-    }
-
-    &-medium{
-        margin-top: 24px;
-
-        @include mq(tablet) {
-          margin-top: 20px;
-
-              font-size: 16px;
-              line-height: 1.76;
-              letter-spacing: 0.04em;
-          }
-
-
-        @include mq(desktop) {
-          margin-top: 32px;
-              font-size: 14px;
-              line-height: 1.94;
-          }
-        
-    }
 }
 
-.about__button{
+.about__title{
+          color: $color-font-main;
+          
+            @include mq(tablet) {
+              font-size: 14px;
+              line-height: 1.76;
+            }
+          
+          
+            @include mq(desktop) {
+              letter-spacing: 0.04em;
+            }
+}
+
+.about__text{
+          margin-top: 24px;
+      
+          @include mq(tablet) {
+            margin-top: 20px;
+      
+            font-size: 16px;
+            line-height: 1.76;
+            letter-spacing: 0.04em;
+          }
+      
+      
+          @include mq(desktop) {
+            margin-top: 32px;
+            font-size: 14px;
+            line-height: 1.94;
+          }
+}
+
+.white-button.about__button{
     margin-top: 20px;
 
     font-weight: 700;
