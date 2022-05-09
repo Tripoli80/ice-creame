@@ -1,0 +1,147 @@
+.footer {
+    padding-top: 40px;
+    background-color: $section-color;
+
+    @include mq (desktop) {
+        padding-top: 60px;
+    }
+}
+.footer__container {
+    margin-bottom: 40px;
+
+    @include mq (tablet) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @include mq (desktop) {
+        margin-bottom: 60px;
+    }
+}
+
+.footer__title {
+    font-family: 'Titan One';
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: $color-font-red;
+
+    &--accent {
+        font-size: 18px;
+        line-height: 1.16;
+        color: $color-font-span;
+    }
+
+    @include mq (tablet) {
+        font-size: 48px;
+        line-height: 1.14;
+        letter-spacing: 0.06em;
+
+        &--accent {
+                font-size: 26px;
+                line-height: 1.15;
+            }
+    }
+
+        @include mq (desktop) {
+            font-size: 58px;
+            line-height: 1.13;
+    
+            &--accent {
+                font-size: 30px;
+            }
+        }
+}
+
+.socials {
+    display: flex;
+    margin-bottom: 40px;
+    margin-left: auto;
+}
+.socials__item:not(:last-child) {
+    margin-right: 28px;
+
+    @include mq (tablet) {
+        margin-right: 30px;
+    }
+
+    @include mq (desktop) {
+        margin-right: 24px;
+    }
+}
+.socials__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+
+    border-radius: 50%;
+    background-color: #FEA5BB;
+
+    // transition-property: background-color ;
+    // @extend %trans;
+    transition: background-color var(--time) var(--functional-cubic);
+
+    &:hover,
+    &:focus {
+        background-color: #D41443;
+    }
+
+    @include mq (tablet) {
+        width: 34px;
+        height: 34px;
+    }
+}
+.socials__icon {
+    width: 20px;
+    height: 20px;
+    fill: #ffffff;
+}
+
+.footer__tel {
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+    &-link {
+        color: $color-font-red;
+    }
+
+    @include mq (tablet) {
+        font-size: 14px;
+    }
+
+    @include mq (desktop) {
+        font-size: 16px;
+    }
+}
+
+.footer__copyright {
+    padding: 20px;
+
+    font-family: 'DM Sans';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+
+    text-align: center;
+
+    color: #907E82;
+
+    border-top: 1px solid #E1E1E1;
+
+    @include mq (tablet) {
+        padding: 8px;
+
+        line-height: 1.86;
+        letter-spacing: 0.02em;
+    }
+}
