@@ -5,6 +5,10 @@
   @media screen and (min-width: 768px) {
     display: flex;
   }
+
+  @media screen and (min-width: 1280px) {
+    justify-content: center;
+  }
 }
 .wrapper {
   display: inline-block;
@@ -29,6 +33,12 @@
       margin-bottom: 0;
       margin-right: 32px;
     }
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-width: 393px;
+    min-height: 538px;
+    padding: 40px;
   }
 }
 .contacts__accent {
@@ -81,6 +91,10 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
 }
 .contacts__text {
   font-family: $font-primary;
@@ -110,6 +124,15 @@
       margin-bottom: 32px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+    line-height: 1.8;
+
+    &::after {
+      min-width: 315px;
+    }
+  }
 }
 .contacts__list {
   &::after {
@@ -129,6 +152,12 @@
       margin-bottom: 32px;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    &::after {
+      min-width: 315px;
+    }
+  }
 }
 .contacts__item {
   font-family: $font-primary;
@@ -141,6 +170,10 @@
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
   }
 }
 .contacts__time {
@@ -156,6 +189,10 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
 }
 .adress__link {
   font-family: $font-primary;
@@ -170,6 +207,10 @@
     font-size: 14px;
     line-height: 1.8;
   }
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
 }
 .list {
   @media screen and (min-width: 768px) {
@@ -177,6 +218,10 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 60px;
   }
 }
 .list__item {
@@ -234,10 +279,26 @@
   &--white:focus {
     background-color: #ecebeb;
   }
+}
 
-  @media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
+  .list__btn--red {
     margin: 0;
     min-width: 191px;
-    min-height: 44px;
+  }
+
+  .list__btn--white {
+    min-width: 174px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .list__btn--red {
+    margin: 0;
+    min-width: 198px;
+  }
+
+  .list__btn--white {
+    min-width: 180px;
   }
 }
