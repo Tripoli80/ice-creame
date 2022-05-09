@@ -1,21 +1,34 @@
+.customer.section {
+    @include mq(mobile) {
+      @include section-class(80px, 80px);
+    }
+    @include mq(tablet) {
+      @include section-class(80px, 80px);
+    }
+    @include mq(desktop) {
+      @include section-class(120px, 120px);
+    }
+  }
+
+
 
 .customer__container{
-    padding-left: 74px;
-    padding-right: 74px;
-    @include mq(mobile-only){
-        padding-left: 15px;
-        padding-right: 15px;
-    }
+padding-left: 74px;
+padding-right: 74px;
+@include mq(mobile-only){
+padding-left: 15px;
+padding-right: 15px;
+ }
 } 
-.photos{
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 32px;
-    width: 85px;
-    height: 85px;
-    @include mq(mobile){
-        margin-bottom: 16px; 
-    }
+.customer__photos{
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 32px;
+width: 85px;
+height: 85px;
+@include mq(mobile){
+margin-bottom: 16px; 
+ }
 }
 
 .customer__blockquote{
@@ -25,14 +38,13 @@ padding-right: 65px;
 padding-bottom: 31px;
 background-color:#FAFAFA;
 @include mq(tablet){
-    padding-top: 37px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 31px;
+padding-top: 37px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 31px;
 }
 
 }
-
 
 .customer__blockquote{
 background-image: url(/images/customer_reviews/slm/blockquote.svg);
@@ -46,9 +58,9 @@ font-family: "DM Sans";
 font-weight: 500;
 font-size: 12px;
 line-height: 2.5;
- text-align: center;
- background-image: repeating-linear-gradient(transparent -5px, transparent 23px, #E1E1E1 25px);
- @include mq(tablet){
+text-align: center;
+background-image: repeating-linear-gradient(transparent -5px, transparent 23px, #E1E1E1 25px);
+@include mq(tablet){
 font-size: 14px;
 line-height: 2.1;
 }
@@ -108,4 +120,5 @@ margin-bottom: 16px;
 }
 
 .customer__home +.customer__items:not(:last-child) {
-    margin-right: 18px;}
+    margin-right: 18px;
+}
