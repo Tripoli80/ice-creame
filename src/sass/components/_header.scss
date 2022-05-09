@@ -23,7 +23,7 @@
     .header {
 
         background-color: #FFB8CA;
-        padding-top: 8px;
+        padding-top: 18px;
     }
 
     .header-logo {
@@ -33,6 +33,7 @@
     }
 
     .button-menu {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -40,7 +41,7 @@
         height: 30px;
         background-color: transparent;
         border: none;
-
+        z-index: 11;
     }
 
     .button-menu-icon {
@@ -58,15 +59,27 @@
         width: 14px;
         height: 14px;
         opacity: 0;
+        fill: #FFFFFF;
     }
+ .button-menu.is-active .icon-cloze {
+     opacity: 1;
 
-    .mobile-button {
+ }
+    .button-menu.is-active .icon-open {
+    opacity: 0;
+    
+}
+
+
+
+
+.mobile-button {
         margin-top: 60px;
         margin-bottom: 19px;
         display: block;
         justify-content: center;
         align-items: center;
-        padding: 12px 37px 11px 37px;
+        padding: 12px 49px 11px 53px;
         margin-right: auto;
         text-align: center;
         background-color: #FFFFFF;
@@ -150,10 +163,10 @@
 
 @media screen and(min-width:768px) {
     .header .container {
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
-
+        z-index: 10;
         width: 768px;
         padding: 0 15px;
         margin: 0 auto;
@@ -225,7 +238,7 @@
         &:focus {
             background-color: #ECEBEB;
             color: #D41443;
-            ;
+            
         }
     }
 
@@ -235,18 +248,19 @@
         margin-left: 13px;
     }
 
-    .button-menu {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        background-color: transparent;
-        border: none;
-        margin-right: 22px;
-        margin-left: auto;
-
-    }
+   .button-menu {
+    //    position: absolute;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 30px;
+       height: 30px;
+       background-color: transparent;
+       border: none;
+       z-index: 11;
+       margin-left: auto;
+       margin-right: 32px;
+   }
 
     .button-menu-icon {
         width: 30px;
@@ -263,8 +277,17 @@
         width: 14px;
         height: 14px;
         opacity: 0;
+        fill: #FFFFFF;
     }
+.button-menu.is-active .icon-cloze {
+    opacity: 1;
 
+}
+
+.button-menu.is-active .icon-open {
+    opacity: 0;
+
+}
     .mobile-button {
         margin-top: 60px;
         margin-bottom: 19px;
@@ -297,24 +320,24 @@
         margin-left: 13px;
     }
 
-    .mobile-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-direction: column;
-        background: #E17992;
-        z-index: 10;
-        width: 100%;
-        opacity: 0;
-        transform: translateX(100%);
+   .mobile-menu {
+       position: absolute;
+       top: 0;
+       right: 0;
+       display: flex;
+       flex-direction: column;
+       background: #E17992;
+       z-index: 10;
+       width: 100%;
+       opacity: 0;
+       transform: translateX(100%);
+   }
 
-    }
-
-    .mobile-menu.is-open {
-        opacity: 1;
-        transform: translateX(0);
-    }
+   .mobile-menu.is-open {
+       opacity: 1;
+       transform: translateX(0%);
+       
+   }
 
     .mobile__links {
         font-family: 'DM Sans';
@@ -361,10 +384,11 @@
         position: absolute;
         left: 0;
         right: 0;
-        width: 1280px;
+        width: 1200px;
         padding: 0 15px;
         margin: 0 auto;
         z-index: 9;
+    }
     .header {
 
         background-color: #FFB8CA;
@@ -409,7 +433,7 @@
         &:hover,
         &:focus {
             color: #D41443;
-            ;
+            
         }
     }
 
@@ -433,7 +457,7 @@
         &:focus {
             background-color: #ECEBEB;
             color: #D41443;
-            ;
+            
         }
     }
 
@@ -450,4 +474,4 @@
     .mobile-menu {
         display: none;
     }
-}}
+}
