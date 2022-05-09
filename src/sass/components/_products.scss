@@ -398,10 +398,11 @@
 .promo-modal {
     position: relative;
     @include flex-3in1;
-    flex-wrap: wrap;
+    flex-direction: column;    
 }
 
 .promo-modal__title {
+    margin-bottom: 25px;
     font-family: $font-titel;
     font-weight: 400;
     font-size: 18px;
@@ -422,12 +423,13 @@
 }
 
 .promo-modal__btn {
-    @include flex-3in1;
+    @include flex-3in1;    
     position: absolute;
     top: 12px;
     right: 12px;
     border: 1px solid transparent;
     border-radius: 50%;
+    background-color: transparent;
     transition: border-color .3s $functional-cubic;
 
     &:hover, &:focus {
