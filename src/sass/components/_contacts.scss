@@ -19,13 +19,15 @@
   &:not(:last-child) {
     margin-bottom: 20px;
   }
+
   @media screen and (min-width: 768px) {
     min-width: 224px;
     min-height: 528px;
-    padding: 40px 32px 40px 32px;
+    padding: 37px 32px 37px 32px;
 
     &:not(:last-child) {
       margin-bottom: 0;
+      margin-right: 32px;
     }
   }
 }
