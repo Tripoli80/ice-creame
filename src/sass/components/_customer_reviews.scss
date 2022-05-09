@@ -83,7 +83,7 @@ list-style: none;
 .customer__item::before {
     display: inline-block;
     margin-right: 10px;
-    color: #C7133E;
+    color:$red-btn-bgc--active;
     content: "•";
   }
 
