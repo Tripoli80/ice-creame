@@ -9,4 +9,4 @@ $(document).ready(function(){var n=!0;$(window).on("scroll load resize",function
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./menu"),require("./js/modal"),require("./js/calc");
 },{"./sass/main.scss":"clu1","./menu":"Z6FK","./js/modal":"RSqK","./js/calc":"QutR"}]},{},["Focm"], null)
-//# sourceMappingURL=/ice-creame/src.a4da1a98.js.map
+//# sourceMappingURL=/ice-creame/src.5c0667e9.js.map
