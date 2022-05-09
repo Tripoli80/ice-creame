@@ -172,3 +172,10 @@ background-size: contain;
           line-height: 1.31;
       } 
 }
+
+// Модалка
+
+.modal--white,
+.section__subtitle.modal--white{
+  color: $color-font-white;
+}
