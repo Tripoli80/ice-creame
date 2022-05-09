@@ -10,9 +10,14 @@
     }
 }
 
-// .products {
-    
-// }
+.products {
+    @include mq(mobile-only) {
+        & .container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
 
 .products__title {
     margin-bottom: 148px;
@@ -85,20 +90,31 @@
 
 .cards__side {  
     position: absolute;        
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     padding-top: 160px;
     padding-bottom: 40px;    
     border-radius: 24px;    
     backface-visibility: hidden;     
     
-    @include mq(tablet) {
-        padding-top: 118px;              
+    @include mq(mobile-only) {            
+        min-height: 493px;
     }
-
+    
+    @include mq(tablet-only) {
+        padding-top: 118px;
+        width: 224px;
+        min-height: 472px;
+    }
+    
     @include mq(desktop) {
         padding-top: 165px;
-        padding-bottom: 60px;               
-    }
+        padding-bottom: 60px;
+        width: 394px;
+        min-height: 587px;
+    }    
 
     &--back {
         transform: rotateY(180deg);
@@ -251,6 +267,9 @@
         height: 6px;                
         background-image: image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
         background-image: -webkit-image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
+
+        background-image: image-set(url("../images/products/webp/three-circles.webp") 1x, url("../images/products/webp/three-circles@2x.webp") 2x);
+        background-image: -webkit-image-set(url("../images/products/webp/three-circles.webp") 1x, url("../images/products/webp/three-circles@2x.webp") 2x);
     }
 }
 
@@ -267,6 +286,11 @@
     letter-spacing: 0.04em;
     color: $color-font-white;
 
+    .cards__side--back & {
+        margin-bottom: 16px;
+        max-width: 185px;
+    }
+
     @include mq(tablet-only) {
         max-width: 160px;
     }
@@ -279,6 +303,53 @@
     }
 }
 
+.promo-form {
+    @include flex-3in1;
+    flex-wrap: wrap;
+    width: 100%;       
+}
+
+.promo-form__input-email {
+    width: calc(100% - 80px);
+    padding: 2px 10px;
+    margin-bottom: 10px;
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;        
+    letter-spacing: 0.04em;
+    outline: none;
+    border-radius: 10px;
+    border: 2px solid transparent;    
+    transition: border-color .3s $functional-cubic;
+
+    @include mq(tablet-only) {
+        width: calc(100% - 40px);
+    }
+
+    &:hover, &:focus {
+        border-color: $color-font-red;
+    }
+}
+
+.promo-form__btn {
+    padding: 5px 10px;    
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    letter-spacing: 0.04em;
+    color: $color-font-red;
+    border-radius: 10px;
+    background-color: $color-font-white;
+    transition: color .3s $functional-cubic, background-color .3s $functional-cubic;
+
+    &:hover, &:focus {
+        color: $color-font-white;
+        background-color: $color-font-red;
+    }
+}
+
 .btn-circle {
     display: flex;
     align-items: center;
@@ -286,6 +357,7 @@
     width: 40px;
     height: 40px;    
     margin-left: auto;
+    margin-top: auto;
     margin-right: auto;
     border-radius: 50%;
     background-color: $color-font-white;    
@@ -312,4 +384,59 @@
     .btn-circle:focus & {
         fill: $color-font-white;
     }
+}
+
+.modal {
+    .products & {
+        width: 50%;
+        height: 25%;
+        border-radius: 24px;
+        background-color: $section-color;
+    }
+}
+
+.promo-modal {
+    position: relative;
+    @include flex-3in1;
+    flex-wrap: wrap;
+}
+
+.promo-modal__title {
+    font-family: $font-titel;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-font-red;
+}
+
+.promo-modal__text {
+    font-family: $font-primary;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.52;
+    text-align: center;
+    letter-spacing: 0.04em;
+    color: $color-font-red;
+}
+
+.promo-modal__btn {
+    @include flex-3in1;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transition: border-color .3s $functional-cubic;
+
+    &:hover, &:focus {
+        border-color: $color-font-red;
+    }
+}
+
+.promo-modal__close-icon {    
+    width: 32px;
+    height: 32px;
+    fill: $color-font-red;
 }

@@ -1,4 +1,4 @@
-<section class="products section">
+<section class="products section" id="products">
     <div class="container">
         <h2 class="products__title section__title">
             <span class="products__subtitle section__subtitle">100% natural</span>
@@ -17,7 +17,11 @@
                 </div>
                 <div class="cards__side cards__side--back card-1">
                     <h3 class="cards__title">ice cream</h3>
-                    <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                    <p class="cards__desc">You flipped the card. Well done!</p>
+                    <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
+                        <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                    </form>                    
                     <button class="cards__btn btn-circle" type="button" data-card1-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
@@ -37,7 +41,11 @@
                 </div>
                 <div class="cards__side cards__side--back card-2">
                     <h3 class="cards__title">ice coffee</h3>
-                    <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                    <p class="cards__desc">You flipped the card. Well done!</p>
+                    <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
+                        <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                    </form>
                     <button class="cards__btn btn-circle" type="button" data-card2-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
@@ -58,8 +66,11 @@
                 </div>
                 <div class="cards__side cards__side--back card-3">
                     <h3 class="cards__title">milkshakes</h3>
-                    <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et. dolore magna aliqua facilisis.</p>
+                    <p class="cards__desc">You flipped the card. Well done!</p>
+                    <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
+                        <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                    </form>
                     <button class="cards__btn btn-circle" type="button" data-card3-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
@@ -69,8 +80,30 @@
             </li>            
         </ul>
     </div>
+    <div class="promo-modal modal" data-modal="4">
+        <p class="promo-modal__title">congratulations</p>
+        <p class="promo-modal__text">Promo code sent to your email</p>
+        <button class="promo-modal__btn js-modal-close" type="button">
+            <svg class="promo-modal__close-icon">
+                <use href="/images/icons.svg#icon-close_menu"></use>
+            </svg>
+        </button>        
+    </div>
+    <div class="overlay js-overlay-modal"></div>
 </section>
 <script>
+    // js-speaker-form
+    (() => {
+        document
+            .querySelector('.js-speaker-form')
+            .addEventListener('submit', e => {
+                e.preventDefault();
+                new FormData(e.currentTarget).forEach((value, name) =>
+                    console.log(`${name}: ${value}`),
+                );
+            });
+    })();    
+    // кривий фліп карток
     (() => {
             const refs = {
                 card1BtnRight: document.querySelector("[data-card1-btn-right]"),
