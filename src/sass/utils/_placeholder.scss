@@ -12,4 +12,8 @@
   transition-timing-function: $functional-cubic;
  }
 
- 
+%button{
+    font-family: inherit;
+    border-radius: 22px;
+    padding: 12px 37px 11px 37px;
+}

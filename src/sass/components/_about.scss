@@ -1,16 +1,14 @@
 .about-section {
-    ///загальна практика для падінгів
-padding-top: 40px;
-padding-bottom: 40px;
+
+@include section-class(40px,40px);
+
 
 @include mq(tablet){
-    padding-top: 20px;
-    padding-bottom: 80px;
+    @include section-class(20px, 80px);
 }
 
 @include mq(desktop) {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    @include section-class(60px, 40px);
 }
 
 background-color: $section-color;
@@ -120,6 +118,7 @@ background-size: contain;
       }
     
       @include mq(desktop) {
+        margin-top: 90px;
         margin-left: 139px;
         max-width: 463px;
       }
@@ -143,6 +142,8 @@ background-size: contain;
         margin-top: 24px;
 
         @include mq(tablet) {
+          margin-top: 20px;
+
               font-size: 16px;
               line-height: 1.76;
               letter-spacing: 0.04em;
@@ -150,6 +151,7 @@ background-size: contain;
 
 
         @include mq(desktop) {
+          margin-top: 32px;
               font-size: 14px;
               line-height: 1.94;
           }
@@ -165,7 +167,8 @@ background-size: contain;
     line-height: 1.29;
 
     @include mq(tablet) {
+      margin-top: 40px;
           font-size: 16px;
           line-height: 1.31;
-      }
+      } 
 }
