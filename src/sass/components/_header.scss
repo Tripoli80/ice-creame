@@ -42,9 +42,20 @@
   }
 
   .header-logo {
-      
+      display: flex;
+      align-items: center;
       width: 199px;
 
+  }
+  .logo-text{
+        font-family: 'Titan One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 1.2;
+        color: #D41443;
+        text-transform: uppercase;
+        margin-left: 20px;
   }
   .header-nav {
         display: none;
@@ -70,11 +81,11 @@
             font-weight: 700;
             font-size: 16px;
             line-height: 1.3;
-            color: #FFFFFF;
+            color: $color-font-white;
     transition: color  250ms $functional-cubic;
             &:hover,
             &:focus {
-                color: #D41443;
+                color: $color-font-red;
     
             }
         }
@@ -87,7 +98,7 @@
                 align-items: center;
                 padding: 12px 41px 11px 37px;
                 text-align: center;
-                background-color: #FFFFFF;
+                background-color: $color-font-white;
                 border-radius: 22px;
                 margin-left: 32px ;
                 font-family: 'DM Sans';
@@ -97,8 +108,8 @@
                 line-height: 1.3;
                 &:hover,
                 &:focus {
-                    background-color: #ECEBEB;
-                    color: #D41443;            
+                    background-color: $white-btn-bgc--active;
+                    color: $color-font-red;            
                 }
                }
             @include mq(desktop){
@@ -135,6 +146,7 @@
         background-color: transparent;
         border: none;
         z-index: 11;
+        margin-left: auto;
         @include mq(desktop){
             display: none;
         }
@@ -147,7 +159,7 @@
     }
 
     .icon-open {
-        fill: #D41443;
+        fill: $color-font-red;
         opacity: 1;
         @include mq(desktop) {
                 display: none;
@@ -158,22 +170,29 @@
         width: 14px;
         height: 14px;
         opacity: 0;
-        fill: #FFFFFF;
+        fill: $color-font-white;
+        
         @include mq(desktop) {
                 display: none;
             }
     }
+        
         .button-menu.is-active{
             position: fixed;
-            left: 50%;
+            left: 90%;
+            @include mq(tablet){
+            position: fixed;
+                left: 93%;
+                top: 20px;
+            }
         }
  .button-menu.is-active .icon-cloze {
      opacity: 1;
-
+transition: opacity 400ms $functional-cubic;
  }
     .button-menu.is-active .icon-open {
     opacity: 0;
-    
+    transition: opacity 400ms $functional-cubic;
 }
 .mobile-button {
         margin-top: 60px;
@@ -184,7 +203,7 @@
         padding: 12px 49px 11px 53px;
         margin-right: auto;
         text-align: center;
-        background-color: #FFFFFF;
+        background-color: $color-font-white;
         border-radius: 22px;
         margin-left: 20px;
         font-family: 'DM Sans';
@@ -195,8 +214,8 @@
 
 
         &:focus {
-            background-color: #ECEBEB;
-            color: #D41443;
+            background-color: $white-btn-bgc--active;
+            color: $color-font-red;
             ;
         }
                 @include mq(desktop) {
@@ -213,23 +232,28 @@
         left: 0;
         display: flex;
         flex-direction: column;
-        background: #E17992;
+        background: $menu-color;
         z-index: 10;
         width: 100%;
         opacity: 0;
-        transform: scale(0);
+        // transform: scale(0);
         transition: 450ms $functional-cubic;
-        // transform: translateX(100%);
-        
+        transform: translateX(100%);
+        @include mq(tablet){
+            width: 40%;
+            left: 60%;
+        }
       @include mq(desktop) {
         display: none;
     }
     }
 
     .mobile-menu.is-open {
+        position: fixed;
+        
         opacity: 1;
-        // transform: translateX(0); 
-        transform: scale(1);
+        transform: translateX(0); 
+        // transform: scale(1);
     @include mq(desktop) {
                 display: none;
             
@@ -241,13 +265,13 @@
         font-weight: 700;
         font-size: 14px;
         line-height: 1.3;
-        color: #FFFFFF;
+        color: $color-font-white;
         padding-top: 12px;
         padding-bottom: 12px;
         // border-bottom: 1px solid #E18298;
         display: block;
         &:focus {
-        color: #D41443;
+        color: $color-font-red;
         }
         
         @include mq(desktop) {
