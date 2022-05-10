@@ -43,15 +43,21 @@ padding-left: 50px;
 padding-right: 50px;
 padding-bottom: 31px;
 }
-
+@media screen and (min-width: $desktop) {
+background-position: 26px 56px;
+}
 }
 
 .customer__blockquote{
 background-image: url(/images/customer_reviews/slm/blockquote.svg);
 background-repeat: no-repeat;
-background-position: 53px 66px;
+background-position: 19px 55px;
+@media screen and (min-width: $tablet) {
+  background-position: 19px 55px;
 }
 
+background-position: 26px 56px;
+}
 
 .customer__text{
 font-family: "DM Sans";
@@ -129,6 +135,7 @@ margin-bottom: 16px;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding-top: 80px;
+  padding-top: 85px;
+  padding-right: 85px;
   
 }
