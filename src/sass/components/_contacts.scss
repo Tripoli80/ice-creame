@@ -57,12 +57,12 @@
   letter-spacing: 0.04em;
 
   color: $color-font-white;
-  background: #f0d1a5;
+  background: $card-2-front-bg;
   border-radius: 4px;
 
   &--another {
     min-width: 130px;
-    background: #c2e297;
+    background: $card-3-front-bg;
   }
 
   @media screen and (min-width: 768px) {
@@ -74,7 +74,7 @@
 
     &--another {
       min-width: 138px;
-      background: #c2e297;
+      background: $card-3-front-bg;
     }
   }
 }
@@ -268,7 +268,7 @@
 
   &--red:hover,
   &--red:focus {
-    background-color: #c7133e;
+    background-color: $red-btn-bgc--active;
   }
 
   &--white {
@@ -278,7 +278,7 @@
 
   &--white:hover,
   &--white:focus {
-    background-color: #ecebeb;
+    background-color: $white-btn-bgc--active;
   }
 }
 
