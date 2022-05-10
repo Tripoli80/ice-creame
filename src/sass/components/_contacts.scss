@@ -1,8 +1,14 @@
 .contacts {
-  // padding-top: 60px;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 245, 246, 1));
+  @media screen and (min-width: 320px) and (max-width: 767.8px) {
+    padding-top: 48px;
+    padding-bottom: 8px;
+  }
+  @media screen and (min-width: 1280px) {
+    padding-bottom: 60px;
+  }
 }
-.upperwrapper {
+.contacts__list {
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -11,9 +17,9 @@
     justify-content: center;
   }
 }
-.wrapper {
+.contacts__item {
   display: inline-block;
-  padding: 37px 32px 37px 32px;
+  padding: 40px 32px 40px 32px;
   min-width: 280px;
   min-height: 412px;
 
@@ -28,7 +34,7 @@
   @media screen and (min-width: 768px) {
     min-width: 224px;
     min-height: 528px;
-    padding: 37px 32px 37px 32px;
+    padding: 40px 32px 40px 32px;
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -57,12 +63,12 @@
   letter-spacing: 0.04em;
 
   color: $color-font-white;
-  background: #f0d1a5;
+  background: $card-2-front-bg;
   border-radius: 4px;
 
   &--another {
     min-width: 130px;
-    background: #c2e297;
+    background: $card-3-front-bg;
   }
 
   @media screen and (min-width: 768px) {
@@ -74,7 +80,7 @@
 
     &--another {
       min-width: 138px;
-      background: #c2e297;
+      background: $card-3-front-bg;
     }
   }
 }
@@ -135,7 +141,7 @@
     }
   }
 }
-.contacts__list {
+.contacts__wrapper {
   &::after {
     display: inline-block;
     content: '';
@@ -160,7 +166,7 @@
     }
   }
 }
-.contacts__item {
+.contacts__element {
   font-family: $font-primary;
   font-style: normal;
   font-weight: 500;
@@ -213,7 +219,7 @@
     font-size: 16px;
   }
 }
-.list {
+.group {
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
@@ -225,7 +231,7 @@
     margin-top: 60px;
   }
 }
-.list__item {
+.group__item {
   max-width: 161px;
   margin-left: auto;
   margin-right: auto;
@@ -247,7 +253,7 @@
     }
   }
 }
-.list__btn {
+.group__btn {
   display: inline-block;
   min-width: 161px;
   min-height: 44px;
@@ -268,7 +274,7 @@
 
   &--red:hover,
   &--red:focus {
-    background-color: #c7133e;
+    background-color: $red-btn-bgc--active;
   }
 
   &--white {
@@ -278,28 +284,36 @@
 
   &--white:hover,
   &--white:focus {
-    background-color: #ecebeb;
+    background-color: $white-btn-bgc--active;
   }
 }
+.group__icon {
+  margin-left: 8px;
+  width: 7px;
+  height: 10px;
 
+  @media screen and (min-width: 768px) {
+    margin-left: 14px;
+  }
+}
 @media screen and (min-width: 768px) {
-  .list__btn--red {
+  .group__btn--red {
     margin: 0;
     min-width: 191px;
   }
 
-  .list__btn--white {
+  .group__btn--white {
     min-width: 174px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .list__btn--red {
+  .group__btn--red {
     margin: 0;
     min-width: 198px;
   }
 
-  .list__btn--white {
+  .group__btn--white {
     min-width: 180px;
   }
 }

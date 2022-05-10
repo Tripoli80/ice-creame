@@ -1,20 +1,20 @@
-<section class="contacts">
+<section class="contacts" id="contact">
   <div class="container">
-    <h2 hidden>Contacts</h2>
+    <h2 class="contacts__title visually-hidden" aria-hidden="true" tabindex="-1">Contacts</h2>
 
-    <div class="upperwrapper">
-      <div class="wrapper">
+    <ul class="contacts__list">
+      <li class="contacts__item">
         <span class="contacts__accent">CAFE</span>
         <p class="contacts__uppertext">Chicago</p>
         <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <ul class="contacts__list">
-          <li class="contacts__item">Monday - Friday</li>
-          <li class="contacts__item">
+        <ul class="contacts__wrapper">
+          <li class="contacts__element">Monday - Friday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>06:00</time> AM - <time>10:00</time> PM</p>
           </li>
-          <li class="contacts__item">Saturday - Sunday</li>
-          <li class="contacts__item">
+          <li class="contacts__element">Saturday - Sunday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>08:00</time> AM - <time>16:00</time> PM</p>
           </li>
         </ul>
@@ -29,20 +29,20 @@
             </li>
           </ul>
         </address>
-      </div>
+      </li>
 
-      <div class="wrapper">
+      <li class="contacts__item">
         <span class="contacts__accent contacts__accent--another">FOODTRUCK</span>
         <p class="contacts__uppertext">Los Angeles</p>
         <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <ul class="contacts__list">
-          <li class="contacts__item">Monday - Friday</li>
-          <li class="contacts__item">
+        <ul class="contacts__wrapper">
+          <li class="contacts__element">Monday - Friday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>06:00</time> AM - <time>10:00</time> PM</p>
           </li>
-          <li class="contacts__item">Saturday - Sunday</li>
-          <li class="contacts__item">
+          <li class="contacts__element">Saturday - Sunday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>08:00</time> AM - <time>16:00</time> PM</p>
           </li>
         </ul>
@@ -57,20 +57,20 @@
             </li>
           </ul>
         </address>
-      </div>
+      </li>
 
-      <div class="wrapper">
+      <li class="contacts__item">
         <span class="contacts__accent">CAFE</span>
         <p class="contacts__uppertext">New York</p>
         <p class="contacts__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
 
-        <ul class="contacts__list">
-          <li class="contacts__item">Monday - Friday</li>
-          <li class="contacts__item">
+        <ul class="contacts__wrapper">
+          <li class="contacts__element">Monday - Friday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>06:00</time> AM - <time>10:00</time> PM</p>
           </li>
-          <li class="contacts__item">Saturday - Sunday</li>
-          <li class="contacts__item">
+          <li class="contacts__element">Saturday - Sunday</li>
+          <li class="contacts__element">
             <p class="contacts__time"><time>08:00</time> AM - <time>16:00</time> PM</p>
           </li>
         </ul>
@@ -85,24 +85,24 @@
             </li>
           </ul>
         </address>
-      </div>
-    </div>
+      </li>
+    </ul>
 
-    <ul class="list">
-      <li class="list__item">
-        <button class="list__btn list__btn--red" type="button">
+    <ul class="group">
+      <li class="group__item">
+        <button class="group__btn group__btn--red" type="button">
           Our Locations
-          <!-- <svg>
-            <use href=""></use>
-          </svg> -->
+          <svg class="group__icon">
+            <use href="./images/icons.svg#icon-red-button"></use>
+          </svg>
         </button>
       </li>
-      <li class="list__item">
-        <button class="list__btn list__btn--white" type="button">
+      <li class="group__item">
+        <button class="group__btn group__btn--white" type="button">
           Franchise
-          <!-- <svg>
-            <use href=""></use>
-          </svg> -->
+          <svg class="group__icon">
+            <use href="./images/icons.svg#icon-white-button"></use>
+          </svg>
         </button>
       </li>
     </ul>
