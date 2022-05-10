@@ -1,10 +1,7 @@
 
 .red-button{
-  //для плейсхолдера
-font-family: inherit;
-    border-radius: 22px;
-    padding: 12px 37px 11px 37px;
-    ////
+    @extend %button;
+    @extend %trans;
 
     color: $red-btn-txt;
         background-color: $red-btn-bgc;
@@ -17,15 +14,12 @@ font-family: inherit;
 
 
 .white-button{
-    //для плейсхолдера
-        font-family: inherit;
-        border-radius: 22px;
-        padding: 12px 37px 11px 37px;
-        ////
-
+    @extend %button;
+    @extend %trans;
+   
     color: $white-btn-txt;
     background-color: $white-btn-bgc;
-    
+
         &:hover,
         &:focus {
             background-color: $white-btn-bgc--active;
