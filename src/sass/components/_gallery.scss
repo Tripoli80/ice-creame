@@ -9,11 +9,9 @@
     @include mq(mobile-only) {
         gap: 2px;
     }
-
     @include mq(tablet) {
         gap: 4px;
     }
-
     @include mq(desktop) {
         gap: 6px;
     }
@@ -26,55 +24,41 @@
     }
 
     &__column {
-
         &--first {
-            
             @include mq(mobile-only) {
                 padding-top: 10px;
             }
-
             @include mq(tablet) {
                 padding-top: 15px;
             }
-
             @include mq(desktop) {
                 padding-top: 20px;
             }
         }
 
         &--third {
-
             @include mq(mobile-only) {
                 padding-top: 25px;
             }
-
             @include mq(tablet) {
                 padding-top: 30px;
             }
-
             @include mq(desktop) {
                 padding-top: 35px;
             }
         }
 
         &--fourth {
-            
             @include mq(mobile-only) {
                 padding-bottom: 10px;
             }
-
             @include mq(tablet) {
                 padding-bottom: 15px;
             }
-
             @include mq(desktop) {
                 padding-bottom: 20px;
             }
         }
-    }
-
-    &__item {
-        display: block;
     }
     
     &__thumb {
@@ -88,18 +72,20 @@
         transition-duration: 350ms;
         transition-delay: 0s;
         transition-timing-function: linear;
-
-        @include mq(desktop) {
-            &:hover,
-            &:focus {
-                transform: translate3d(-25px, -25px, 30px) scale(1.15);
+        
+        
+        &:hover,
+        &:focus {
+            @include mq(tablet) {
+                transform: translate3d(-10px, -10px, 15px) scale(1.25);
+                box-shadow: 8px 8px 6px 2px rgba(184, 112, 160, 0.3);
+            }
+            @include mq(desktop) {
+                transform: translate3d(-15px, -15px, 30px) scale(1.15);
                 box-shadow: 10px 10px 8px 2px rgba(184, 112, 160, 0.3);
             }
         }
-
-        
-
-
+    
         &::before {
             content: '';
             position: absolute;
@@ -123,11 +109,9 @@
             @include mq(mobile-only) {
                 max-width: 40px;
             }
-
             @include mq(tablet) {
                 max-width: 86px;
             }
-
             @include mq(desktop) {
                 max-width: 139px;
             }
@@ -137,11 +121,9 @@
             @include mq(mobile-only) {
                 margin-bottom: 2px;
             }
-
             @include mq(tablet) {
                 margin-bottom: 4px;
             }
-
             @include mq(desktop) {
                 margin-bottom: 6px;
             }
