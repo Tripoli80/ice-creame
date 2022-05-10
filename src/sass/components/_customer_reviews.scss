@@ -10,9 +10,7 @@
     }
   }
 
-
-
-.customer__container{
+.container{
 padding-left: 74px;
 padding-right: 74px;
 @include mq(mobile-only){
@@ -32,12 +30,14 @@ margin-bottom: 16px;
 }
 
 .customer__blockquote{
+  @media screen and (max-width: #{$tablet - 0.02}) {
 padding-top: 43px;
 padding-left: 65px;
 padding-right: 65px;
 padding-bottom: 31px;
+  }
 background-color:#FAFAFA;
-@include mq(tablet){
+@media screen and (min-width: $tablet) {
 padding-top: 37px;
 padding-left: 50px;
 padding-right: 50px;
