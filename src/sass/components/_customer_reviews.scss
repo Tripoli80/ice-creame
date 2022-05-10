@@ -1,0 +1,124 @@
+.customer.section {
+    @include mq(mobile) {
+      @include section-class(80px, 80px);
+    }
+    @include mq(tablet) {
+      @include section-class(80px, 80px);
+    }
+    @include mq(desktop) {
+      @include section-class(120px, 120px);
+    }
+  }
+
+
+
+.customer__container{
+padding-left: 74px;
+padding-right: 74px;
+@include mq(mobile-only){
+padding-left: 15px;
+padding-right: 15px;
+ }
+} 
+.customer__photos{
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 32px;
+width: 85px;
+height: 85px;
+@include mq(mobile){
+margin-bottom: 16px; 
+ }
+}
+
+.customer__blockquote{
+padding-top: 43px;
+padding-left: 65px;
+padding-right: 65px;
+padding-bottom: 31px;
+background-color:#FAFAFA;
+@include mq(tablet){
+padding-top: 37px;
+padding-left: 50px;
+padding-right: 50px;
+padding-bottom: 31px;
+}
+
+}
+
+.customer__blockquote{
+background-image: url(/images/customer_reviews/slm/blockquote.svg);
+background-repeat: no-repeat;
+background-position: 53px 66px;
+}
+
+
+.customer__text{
+font-family: "DM Sans";
+font-weight: 500;
+font-size: 12px;
+line-height: 2.5;
+text-align: center;
+background-image: repeating-linear-gradient(transparent -5px, transparent 23px, #E1E1E1 25px);
+@include mq(tablet){
+font-size: 14px;
+line-height: 2.1;
+}
+@include mq(desktop){
+font-size: 16px;
+line-height: 1.86;
+}
+
+}
+
+.customer__breadcrumb{
+margin: 0;
+justify-content: center;
+display: flex;
+flex-wrap: wrap;
+padding: 16px;
+list-style: none;  
+}
+
+.customer__item::before {
+    display: inline-block;
+    margin-right: 10px;
+    color:$red-btn-bgc--active;
+    content: "•";
+  }
+
+
+  .customer__comment{
+    text-align: center;
+    font-family: "DM Sans";
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    @include mq(mobile-only){
+margin-bottom: 16px;
+  }
+  }
+  .customer__carusel{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .customer__home{
+    background-image: url(/images/customer_reviews/slm/home.svg);  
+    background-repeat: no-repeat;
+    background-position:center;
+    margin-right: 18px;
+}
+
+.customer__items{
+    background-image: url(/images/customer_reviews/slm/Ellipse.svg); 
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+.customer__home +.customer__items:not(:last-child) {
+    margin-right: 18px;
+}
