@@ -1,6 +1,5 @@
-
-.red-button{
-    @extend %button;
+//Button color style only
+.button--red{
     @extend %trans;
 
     color: $red-btn-txt;
@@ -13,8 +12,7 @@
 }
 
 
-.white-button{
-    @extend %button;
+.button--white{
     @extend %trans;
    
     color: $white-btn-txt;
@@ -25,6 +23,8 @@
             background-color: $white-btn-bgc--active;
         }
     }
+
+
 
 .button__icon{
     margin-left: 13px;
