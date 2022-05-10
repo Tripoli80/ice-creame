@@ -1,3 +1,14 @@
+.gallery__section.section  {
+    
+      @include section-class(40px, 40px);
+    
+    @include mq(tablet) {
+      @include section-class(40px, 40px);
+    }
+    @include mq(desktop) {
+      @include section-class(60px, 60px);
+    }
+  }
 .gallery {
     display: flex;
     margin-left: auto;
@@ -18,8 +29,8 @@
 
     &__section {
         background-image: linear-gradient(to bottom,
-        #FFF5F6 40%,
-        #fff 40%,
+        #FFF5F6 41%,
+        #fff 41%,
         #fff 65%);
     }
 

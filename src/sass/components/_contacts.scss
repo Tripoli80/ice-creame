@@ -220,6 +220,8 @@
   }
 }
 .group {
+   margin-top: 32px;//tripoli80
+
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: center;
@@ -266,7 +268,7 @@
   border-radius: 22px;
 
   &--red {
-    margin-top: 32px;
+   
 
     color: $color-font-white;
     background-color: $color-font-red;
