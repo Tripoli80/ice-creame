@@ -1,4 +1,6 @@
 .hero {
+min-width: 320px;
+
   background-color: $main-color;
 
   &__container {
@@ -9,7 +11,6 @@
     padding-right: 15px;
     margin: 0 auto;
     overflow: hidden;
-
     @include mq(mobile) {
       width: 480px;
     }
