@@ -1,16 +1,16 @@
 .customer.section {
-    @include mq(mobile) {
-      @include section-class(80px, 80px);
-    }
+   
+      @include section-class(40px, 0px);
+    
     @include mq(tablet) {
       @include section-class(80px, 80px);
     }
     @include mq(desktop) {
-      @include section-class(120px, 120px);
+      @include section-class(60px, 120px);
     }
   }
 
-.container{
+.customer .container{
 padding-left: 74px;
 padding-right: 74px;
 @include mq(mobile-only){

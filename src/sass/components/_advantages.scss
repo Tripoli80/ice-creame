@@ -1,5 +1,5 @@
 .advantages.section {
-    @include section-class(20px, 40px);
+  @include section-class(20px, 40px);
 
   @include mq(mobile) {
     @include section-class(20px, 40px);
@@ -8,7 +8,7 @@
     @include section-class(40px, 40px);
   }
   @include mq(desktop) {
-    @include section-class(21px, 60px);
+    @include section-class(20px, 60px);
   }
 }
 .advantages {
@@ -16,13 +16,13 @@
   &__list {
     display: flex;
     flex-direction: column;
-     @include mq(mobile-only) {
-       padding-left:  5px;
+    @include mq(mobile-only) {
+      padding-left: 5px;
       padding-right: 5px;
-      }
+    }
     @include mq(tablet) {
       flex-direction: row;
-      padding-left:  17px;
+      padding-left: 17px;
       padding-right: 17px;
     }
   }
