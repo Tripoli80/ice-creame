@@ -122,3 +122,13 @@ margin-bottom: 16px;
 .customer__home +.customer__items:not(:last-child) {
     margin-right: 18px;
 }
+
+// слік цсс
+
+.slick-img{
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  padding-top: 80px;
+  
+}
