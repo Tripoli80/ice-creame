@@ -180,19 +180,16 @@
   height: 50px;
   border: 0;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  border-radius: 22px;
   cursor: pointer;
 }
 .modal-form__centr {
   margin-top: 10px;
-
-
   margin-left: auto;
   margin-right: auto;
 }
 
 .modal-form__buttonname {
- 
   color: $color-font-white;
   font-size: 16px;
   font-weight: 400;
