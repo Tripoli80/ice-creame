@@ -12,22 +12,23 @@
 }
 }
 
-.about__overlay{
+
+.about__overlay--left{
 background-repeat: no-repeat;
-background-size: contain;
       
 //// Ретінізація фонових зображень + підтримка формату webp
   @include mq(mobile-only) {
-    background-position: 0px 578px;
+    background-position: 0px 534px;
+    //574-40=534
     
-    background-image: url(../images/about/s/bgi-milk.png);
+    background-image: url(../images/about/bgi/s/bgi-milk--left.png);
     background-image: -webkit-image-set(
-      url(../images/about/s/bgi-milk.webp) 1x
+      url(../images/about/bgi/s/bgi-milk--left.webp) 1x
     );
     @include mq(retina) {
-      background-image: url(../images/about/s/bgi-milk@2x.png);
+      background-image: url(../images/about/bgi/s/bgi-milk--left@2x.png);
       background-image: -webkit-image-set(
-        url(../images/about/s/bgi-milk@2x.webp) 2x
+        url(../images/about/bgi/s/bgi-milk--left@2x.webp) 2x
       );
     }
   }
@@ -35,18 +36,47 @@ background-size: contain;
   @include mq(desktop) {
     background-position: 0px 195px;
 
-    background-image: url(../images/about/l/bgi-milk.png);
+    background-image: url(../images/about/bgi/l/bgi-milk--left.png);
     background-image: -webkit-image-set(
-      url(../images/about/l/bgi-milk.webp) 1x
+      url(../images/about/bgi/l/bgi-milk--left.webp) 1x
     );
     @include mq(retina) {
-      background-image: url(../images/about/l/bgi-milk@2x.png);
+      background-image: url(../images/about/bgi/l/bgi-milk--left@2x.png);
       background-image: -webkit-image-set(
-        url(../images/about/l/bgi-milk@2x.webp) 2x
+        url(../images/about/bgi/l/bgi-milk--left@2x.webp) 2x
       );
     }
   }
-  ///////////Ретінізація...////
+}
+
+.about__overlay--right {
+  background-repeat: no-repeat;
+
+  //// Ретінізація фонових зображень + підтримка формату webp
+  @include mq(mobile-only) {
+    background-position: right 534px;
+    //574-40=534
+
+    background-image: url(../images/about/bgi/s/bgi-milk--right.png);
+    background-image: -webkit-image-set(url(../images/about/bgi/s/bgi-milk--right.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/about/bgi/s/bgi-milk--right@2x.png);
+      background-image: -webkit-image-set(url(../images/about/bgi/s/bgi-milk--right@2x.webp) 2x);
+    }
+  }
+
+  @include mq(desktop) {
+    background-position: right 195px;
+
+    background-image: url(../images/about/bgi/l/bgi-milk--right.png);
+    background-image: -webkit-image-set(url(../images/about/bgi/l/bgi-milk--right.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/about/bgi/l/bgi-milk--right@2x.png);
+      background-image: -webkit-image-set(url(../images/about/bgi/l/bgi-milk--right@2x.webp) 2x);
+    }
+  }
 }
 
 
@@ -84,27 +114,27 @@ background-size: contain;
 }
 
 .about__textContent{
-    margin-top: 40px;
-    margin-left: 5px;
-    max-width: calc(100% - 70px);
+    padding-top: 40px;
+    padding-left: 5px;
+    max-width: calc(100% - 65px);
 
     font-family: 'DM Sans';
     color: $color-font-second;
 
     @media screen and (min-width: 400px) {
-        margin-left: 30px;
-        max-width: calc(100% - 90px);
+        padding-left: 30px;
+        max-width: calc(100% - 60px);
       }
 
     @include mq(tablet) {
-      margin-left: 32px;
-      max-width: 334px;
+      padding-left: 32px;
+      max-width: 366px;
       }
     
       @include mq(desktop) {
-        margin-top: 90px;
-        margin-left: 139px;
-        max-width: 463px;
+        padding-top: 90px;
+        padding-left: 139px;
+        max-width: 602px;
       }
 
 }
