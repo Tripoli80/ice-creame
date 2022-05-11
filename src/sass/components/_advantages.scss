@@ -1,6 +1,5 @@
 .advantages.section {
   @include section-class(20px, 40px);
-
   @include mq(mobile) {
     @include section-class(20px, 40px);
   }
@@ -11,22 +10,25 @@
     @include section-class(20px, 60px);
   }
 }
+.advantages .container {
+  @include pg(20px, 20px);
+  @include mq(tablet) {
+    @include pg(32px, 32px);
+  }
+  @include mq(desktop) {
+    @include pg(16px, 16px);
+  }
+}
+
 .advantages {
   background-color: $section-color;
   &__list {
     display: flex;
     flex-direction: column;
-    @include mq(mobile-only) {
-      padding-left: 5px;
-      padding-right: 5px;
-    }
     @include mq(tablet) {
       flex-direction: row;
-      padding-left: 17px;
-      padding-right: 17px;
     }
   }
-
   &__item {
     width: 230px;
     @include mq(tablet) {
@@ -46,12 +48,44 @@
         margin-right: 165px;
       }
     }
+    &::before {
+      content: '';
+      display: block;
+      margin-bottom: 16px;
+      width: 50px;
+      height: 50px;
+      @include mq(tablet-only) {
+        margin-bottom: 36px;
+      }
+      @include mq(desktop) {
+        margin-bottom: 40px;
+      }
+    }
+    &:nth-child(1):before {
+      background-repeat: no-repeat;
+      background-image: url('../images/advantages/s/icon_1.png');
+      @include mq(retina) {
+        background-image: url('../images/advantages/s/icon_1@2x.png');
+      }
+    }
+    &:nth-child(2):before {
+      background-repeat: no-repeat;
+      background-image: url('../images/advantages/s/icon_2.png');
+      @include mq(retina) {
+        background-image: url('../images/advantages/s/icon_2@2x.png');
+      }
+    }
+    &:nth-child(3):before {
+      background-repeat: no-repeat;
+      background-image: url('../images/advantages/s/icon_3.png');
+      @include mq(retina) {
+        background-image: url('../images/advantages/s/icon_3@2x.png');
+      }
+    }
   }
-
   &__pic {
     display: block;
     margin-bottom: 16px;
-
     @include mq(tablet-only) {
       margin-bottom: 36px;
     }
@@ -68,14 +102,18 @@
     font-size: 36px;
     line-height: 1.13em;
     letter-spacing: 0.04em;
-
-    margin-bottom: 15px;
     opacity: 0;
   }
   &__descripton {
+
+    letter-spacing: 0rem;
+    display: block;
     font-family: 'DM Sans';
     font-weight: 700;
     font-size: 12px;
     line-height: 170%;
+    color: #000000;
+    padding-top: 15px;
+    
   }
 }
