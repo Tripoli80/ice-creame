@@ -1,5 +1,5 @@
 .hero {
-min-width: 320px;
+  min-width: 320px;
 
   background-color: $main-color;
 
@@ -281,7 +281,7 @@ min-width: 320px;
 
   &__link {
     display: block;
-    padding: 11px 14px;
+    padding: 7px 14px;
     border-radius: 20px;
 
     font-family: 'DM Sans';
@@ -293,6 +293,7 @@ min-width: 320px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(desktop) {
+      padding: 11px 23px;
       font-size: 14px;
       line-height: 1.29;
     }
@@ -440,6 +441,3 @@ min-width: 320px;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
 }
-
-
-
