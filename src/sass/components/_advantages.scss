@@ -63,24 +63,16 @@
     }
     &:nth-child(1):before {
       background-repeat: no-repeat;
-      background-image: url('../images/advantages/s/icon_1.png');
-      @include mq(retina) {
-        background-image: url('../images/advantages/s/icon_1@2x.png');
-      }
+      @include bgimg('../images/advantages/s/icon_1', 'png');
     }
     &:nth-child(2):before {
       background-repeat: no-repeat;
-      background-image: url('../images/advantages/s/icon_2.png');
-      @include mq(retina) {
-        background-image: url('../images/advantages/s/icon_2@2x.png');
-      }
+      @include bgimg('../images/advantages/s/icon_2', 'png');
     }
     &:nth-child(3):before {
       background-repeat: no-repeat;
-      background-image: url('../images/advantages/s/icon_3.png');
-      @include mq(retina) {
-        background-image: url('../images/advantages/s/icon_3@2x.png');
-      }
+
+      @include bgimg('../images/advantages/s/icon_3', 'png');
     }
   }
   &__pic {
