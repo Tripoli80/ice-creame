@@ -17,7 +17,7 @@
   padding: $padding-top 0 $padding-bottom 0;
 }
 
-@mixin pg ($padding-left: 0px, $padding-right: 0px) {
+@mixin pg($padding-left: 0px, $padding-right: 0px) {
   padding-left: $padding-left;
   padding-right: $padding-right;
 }
@@ -62,3 +62,18 @@
     }
   }
 }
+
+
+// exemple using      @include bgimg('../images/advantages/s/icon_2', 'png');
+
+@mixin bgimg($filelink, $type) {
+  background-image: url($filelink + '.' + $type);
+  background-image: -webkit-image-set(url($filelink + '.webp') 1x);
+
+  @include mq(retina) {
+    background-image: url($filelink + '@2x.' + $type);
+    background-image: -webkit-image-set(url($filelink + '@2x.webp') 2x);
+  }
+}
+
+
