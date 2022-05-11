@@ -1,38 +1,41 @@
 <section class="about__section" id="about">
-    <div class="container about__overlay">
-        <h2 class="section__title">
-            <span class="section__subtitle">tradition and love</span>
-            how it’s made?
-        </h2>
-        <div class="about__content">
+<div class="about__overlay--left">
+    <div class="about__overlay--right">
+            <div class="container">
+                <h2 class="section__title">
+                    <span class="section__subtitle">tradition and love</span>
+                    how it’s made?
+                </h2>
+                <div class="about__content">
                     <picture>
                         <source srcset="
-                                                    images/about/l/milk.webp    1x,
-                                                    images/about/l/milk@2x.webp 2x
-                                                  " media="(min-width: 1280px)" type="image/webp" />
+                                                                images/about/main_cow/l/milk.webp    1x,
+                                                                images/about/main_cow/l/milk@2x.webp 2x
+                                                              " media="(min-width: 1280px)" type="image/webp" />
                         <source srcset="
-                                                    images/about/l/milk.png    1x,
-                                                    images/about/l/milk@2x.png 2x
-                                                  " media="(min-width: 1280px)" type="image/png" />
+                                                                images/about/main_cow/l/milk.png    1x,
+                                                                images/about/main_cow/l/milk@2x.png 2x
+                                                              " media="(min-width: 1280px)" type="image/png" />
                         <source srcset="
-                                                    images/about/m/milk.webp    1x,
-                                                    images/about/m/milk@2x.webp 2x
-                                                  " media="(min-width: 768px)" type="image/webp" />
+                                                                images/about/main_cow/m/milk.webp    1x,
+                                                                images/about/main_cow/m/milk@2x.webp 2x
+                                                              " media="(min-width: 768px)" type="image/webp" />
                         <source srcset="
-                                                    images/about/m/milk.png    1x,
-                                                    images/about/m/milk@2x.png 2x
-                                                  " media="(min-width: 768px)" type="image/png" />
+                                                                images/about/main_cow/m/milk.png    1x,
+                                                                images/about/main_cow/m/milk@2x.png 2x
+                                                              " media="(min-width: 768px)" type="image/png" />
                         <source srcset="
-                                                    images/about/s/milk.webp    1x,
-                                                    images/about/s/milk@2x.webp 2x
-                                                  " media="(max-width: 767px)" type="image/webp" />
-                        <source srcset="images/about/s/milk@2x.png 2x" media="(max-width: 767px)" type="image/png" />
-                    
-                        <img  class="about__image" src="images/about/s/milk.png" alt="Cow and bottle of milk" />
+                                                                images/about/main_cow/s/milk.webp    1x,
+                                                                images/about/main_cow/s/milk@2x.webp 2x
+                                                              " media="(max-width: 767px)" type="image/webp" />
+                        <source srcset="images/about/main_cow/s/milk@2x.png 2x" media="(max-width: 767px)" type="image/png" />
+            
+                        <img class="about__image" src="images/about/main_cow/s/milk.png" alt="Cow and bottle of milk" />
                     </picture>
-                    
+            
                     <div class="about__textContent">
-                        <h3 class="about__title">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
+                        <h3 class="about__title">Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus,
+                            faucibus
                             lorem eget,
                             egestas eros.
                             Maecenas eleifend erat at justo fringilla.</h3>
@@ -42,17 +45,19 @@
                             Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
                             <br>
                             <br>
-                        Aliquam erat volutpat. Aenean accumsan.
+                            Aliquam erat volutpat. Aenean accumsan.
                         </p>
-                    
+            
                         <button class="button--white about__button js-open-modal" data-modal="about-modal">Read more
                             <svg class="button__icon" width="7px" height="10px">
                                 <use href="./images/icons.svg#icon-white-button"></use>
                             </svg>
                         </button>
                     </div>
-        </div>
+                </div>
+            </div>
     </div>
+</div>
 </section>
 
 <!-- Модалка about-->

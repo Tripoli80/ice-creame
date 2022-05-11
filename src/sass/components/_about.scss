@@ -12,22 +12,23 @@
 }
 }
 
-.about__overlay{
+
+.about__overlay--left{
 background-repeat: no-repeat;
-background-size: contain;
       
 //// Ретінізація фонових зображень + підтримка формату webp
   @include mq(mobile-only) {
-    background-position: 0px 578px;
+    background-position: 0px 534px;
+    //574-40=534
     
-    background-image: url(../images/about/s/bgi-milk.png);
+    background-image: url(../images/about/bgi/s/bgi-milk--left.png);
     background-image: -webkit-image-set(
-      url(../images/about/s/bgi-milk.webp) 1x
+      url(../images/about/bgi/s/bgi-milk--left.webp) 1x
     );
     @include mq(retina) {
-      background-image: url(../images/about/s/bgi-milk@2x.png);
+      background-image: url(../images/about/bgi/s/bgi-milk--left@2x.png);
       background-image: -webkit-image-set(
-        url(../images/about/s/bgi-milk@2x.webp) 2x
+        url(../images/about/bgi/s/bgi-milk--left@2x.webp) 2x
       );
     }
   }
@@ -35,18 +36,46 @@ background-size: contain;
   @include mq(desktop) {
     background-position: 0px 195px;
 
-    background-image: url(../images/about/l/bgi-milk.png);
+    background-image: url(../images/about/bgi/l/bgi-milk--left.png);
     background-image: -webkit-image-set(
-      url(../images/about/l/bgi-milk.webp) 1x
+      url(../images/about/bgi/l/bgi-milk--left.webp) 1x
     );
     @include mq(retina) {
-      background-image: url(../images/about/l/bgi-milk@2x.png);
+      background-image: url(../images/about/bgi/l/bgi-milk--left@2x.png);
       background-image: -webkit-image-set(
-        url(../images/about/l/bgi-milk@2x.webp) 2x
+        url(../images/about/bgi/l/bgi-milk--left@2x.webp) 2x
       );
     }
   }
-  ///////////Ретінізація...////
+}
+
+.about__overlay--right {
+  background-repeat: no-repeat;
+
+  //// Ретінізація фонових зображень + підтримка формату webp
+  @include mq(mobile-only) {
+    background-position: right 534px;
+
+    background-image: url(../images/about/bgi/s/bgi-milk--right.png);
+    background-image: -webkit-image-set(url(../images/about/bgi/s/bgi-milk--right.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/about/bgi/s/bgi-milk--right@2x.png);
+      background-image: -webkit-image-set(url(../images/about/bgi/s/bgi-milk--right@2x.webp) 2x);
+    }
+  }
+
+  @include mq(desktop) {
+    background-position: right 195px;
+
+    background-image: url(../images/about/bgi/l/bgi-milk--right.png);
+    background-image: -webkit-image-set(url(../images/about/bgi/l/bgi-milk--right.webp) 1x);
+
+    @include mq(retina) {
+      background-image: url(../images/about/bgi/l/bgi-milk--right@2x.png);
+      background-image: -webkit-image-set(url(../images/about/bgi/l/bgi-milk--right@2x.webp) 2x);
+    }
+  }
 }
 
 
