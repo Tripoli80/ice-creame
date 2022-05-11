@@ -105,7 +105,6 @@
     opacity: 0;
   }
   &__descripton {
-
     letter-spacing: 0rem;
     display: block;
     font-family: 'DM Sans';
@@ -114,6 +113,14 @@
     line-height: 170%;
     color: #000000;
     padding-top: 15px;
-    
+
+    @include mq(tablet) {
+      line-height: 174%;
+      font-size: 14px;
+    }
+    @include mq(desktop) {
+      font-size: 16px;
+      line-height: 176%;
+    }
   }
 }
