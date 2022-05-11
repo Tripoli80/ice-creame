@@ -74,3 +74,8 @@
     https://gyazo.com/b69b0036757fe444ddbfbbeaf653b11a
     https://gyazo.com/67f800e44a743a142a319ac2f80563aa
     8)
+
+
+
+<!-- picture  клас на img -->
+english

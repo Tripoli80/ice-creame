@@ -1,4 +1,6 @@
 .hero {
+  min-width: 320px;
+
   background-color: $main-color;
 
   &__container {
@@ -9,7 +11,6 @@
     padding-right: 15px;
     margin: 0 auto;
     overflow: hidden;
-
     @include mq(mobile) {
       width: 480px;
     }
@@ -280,7 +281,7 @@
 
   &__link {
     display: block;
-    padding: 11px 14px;
+    padding: 7px 14px;
     border-radius: 20px;
 
     font-family: 'DM Sans';
@@ -292,6 +293,7 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(desktop) {
+      padding: 11px 23px;
       font-size: 14px;
       line-height: 1.29;
     }

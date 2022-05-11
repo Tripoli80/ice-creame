@@ -1,20 +1,23 @@
+// просто flex який центрує нащадків всередині батьківського елементу
 @mixin flex-3in1 ($display: flex, $align-items: center, $justify-content: center) {
     display: $display;
     align-items: $align-items;
     justify-content: $justify-content;
 }
 
+// можна використати при позиціонуванні флексом по горизонталі де потрібно задати відступи між елементами
 @mixin flex-gap ($display: flex, $justify-content: center, $gap: 30px) {
     display: $display;    
-    justify-content: $justify-content;    
-    gap: $gap;
+    justify-content: $justify-content; // вирівняє по центру батька елементи flex
+    gap: $gap; // відступ між сусідами (не потрібно гратись з margin)
 }
 
+// можна вказати падінги не двома рядками коду а одним рядком :)
 @mixin section-class ($padding-top: 60px, $padding-bottom: 60px) {
     padding: $padding-top 0 $padding-bottom 0;
 }
 
-
+// дуже файна штука для медіа-запитів
 @mixin mq($screen) {
     $mobile: 480px;
     $tablet: 768px;
