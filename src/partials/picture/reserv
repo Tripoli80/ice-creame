@@ -1,6 +1,14 @@
+=======
 <section class="section customer" id="customer">
-  <div class="customer__container">
-    <h2 hidden>slider customer hidden</h2>
+  <div class="container">
+    <h2 customer__title class="visually-hidden">slider customer hidden</h2>
+    <!-- <div class="customer__slick">
+            <div class="single-item">
+              <div class="slick-img" style="background-image:url(/images/customer_reviews/slm/card1_result.webp);"></div>
+              <div class="slick-img" style="background-image:url(/images/customer_reviews/slm/card2_result.webp);"></div>
+              <div class="slick-img" style="background-image:url(/images/customer_reviews/slm/card3_result.webp);"></div>
+            </div>
+          </div> -->
     <img
       class="customer__photos"
       src="/images/customer_reviews/slm/card1_result.webp"
@@ -8,16 +16,16 @@
     />
 
     <div class="customer__blockquote">
-      <div class="customer__svg">
-        <!-- <svg class="customer__svg" width="50" height="40">
-                <use href="/images/customer_reviews/slm/blockquote.svg">
-                </use>  
-              </svg> -->
+      <div class="customer__thumb">
+        <svg width="50" height="40">
+          <use href="/images/customer_reviews/slm/blockquote.svg"></use>
+        </svg>
+        <div class="customer__line"></div>
+        <p class="customer__text">
+          Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
+          nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
+        </p>
       </div>
-      <p class="customer__text">
-        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In hendrerit
-        nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel risus.
-      </p>
     </div>
     <!-- крапки -->
     <ol class="customer__breadcrumb">
