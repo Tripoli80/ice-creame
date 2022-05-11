@@ -7,10 +7,10 @@ $(document).ready(function(){var n=!0;$(window).on("scroll load resize",function
 },{}],"EoJx":[function(require,module,exports) {
 document.querySelector(".js-speaker-form").addEventListener("submit",e=>{e.preventDefault(),new FormData(e.currentTarget).forEach((e,r)=>console.log(`${r}: ${e}`))});
 },{}],"i0CD":[function(require,module,exports) {
-
+(()=>{const e=document.querySelector("[data-menu-button]"),t=document.querySelector("[data-menu]");e.addEventListener("click",()=>{const a="true"===e.getAttribute("aria-expanded")||!1;e.classList.toggle("is-active"),e.setAttribute("aria-expanded",!a),t.classList.toggle("is-open")})})();
 },{}],"RSqK":[function(require,module,exports) {
 !function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),c=0;o[c]&&o[c]!==t;)++c;return Boolean(o[c])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype),document.addEventListener("DOMContentLoaded",function(){var e=document.querySelectorAll(".js-open-modal"),t=document.querySelector(".js-overlay-modal"),o=document.querySelectorAll(".js-modal-close");e.forEach(function(e){e.addEventListener("click",function(e){e.preventDefault();var o=this.getAttribute("data-modal");document.querySelector('.modal[data-modal="'+o+'"]').classList.add("active"),t.classList.add("active")})}),o.forEach(function(e){e.addEventListener("click",function(e){this.closest(".modal").classList.remove("active"),t.classList.remove("active")})}),document.body.addEventListener("keyup",function(e){27==e.keyCode&&(document.querySelector(".modal.active").classList.remove("active"),document.querySelector(".overlay").classList.remove("active"))},!1),t.addEventListener("click",function(){document.querySelector(".modal.active").classList.remove("active"),this.classList.remove("active")})});
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/calc"),require("./js/flip"),require("./js/speaker"),require("./js/menu"),require("./js/modal");
 },{"./sass/main.scss":"clu1","./js/calc":"QutR","./js/flip":"z9QZ","./js/speaker":"EoJx","./js/menu":"i0CD","./js/modal":"RSqK"}]},{},["Focm"], null)
-//# sourceMappingURL=/ice-creame/src.d5cd9f51.js.map
+//# sourceMappingURL=/ice-creame/src.dec8530f.js.map
