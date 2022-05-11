@@ -28,15 +28,15 @@
 
   &__wrapper {
     position: relative;
-    width: 218px;
+    max-width: 218px;
     z-index: 9;
 
     @include mq(tablet) {
-      width: 162px;
+      max-width: 162px;
     }
 
     @include mq(desktop) {
-      width: 277px;
+      max-width: 277px;
     }
   }
 
@@ -139,13 +139,13 @@
     position: absolute;
     left: 167px;
     bottom: 56px;
-    width: 114px;
+    max-width: 114px;
   }
 
   @include mq(desktop) {
     left: 228px;
     bottom: 84px;
-    width: 200px;
+    max-width: 200px;
   }
 
   &__text {
@@ -228,7 +228,6 @@
     font-size: 28px;
     line-height: 1.1429;
     letter-spacing: 0.04em;
-    text-transform: uppercase;
     color: #d41443;
     z-index: 2;
 
@@ -257,12 +256,14 @@
     }
   }
   &__name {
+    display: block;
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 400;
     font-size: 8px;
     line-height: 1.25;
     text-align: right;
+    letter-spacing: 0;
     color: #ffffff;
 
     @include mq(desktop) {
