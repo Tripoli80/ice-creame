@@ -100,9 +100,16 @@
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    line-height: 1.13em;
+    line-height: 1.14em;
     letter-spacing: 0.04em;
     opacity: 0;
+
+    @include mq(tablet) {
+      font-size: 48px;
+    }
+    @include mq(desktop) {
+      font-size: 58px;
+    }
   }
   &__descripton {
     letter-spacing: 0rem;
