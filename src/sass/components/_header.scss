@@ -1,17 +1,17 @@
 
 .header.section {
- @include section-class(20px, 40px);
+ @include section-class(0, 0);
     
 @include mq(mobile) {
-@include section-class(20px, 40px);
+@include section-class(0, 0);
  }
     
  @include mq(tablet) {
-@include section-class(40px, 40px);
+@include section-class(0, 0);
 }
     
  @include mq(desktop) {
- @include section-class(21px, 60px);
+ @include section-class(0, 0);
  }
  }
  .header.section .container{

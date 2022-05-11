@@ -51,6 +51,13 @@
   &__pic {
     display: block;
     margin-bottom: 16px;
+
+    @include mq(tablet-only) {
+      margin-bottom: 36px;
+    }
+    @include mq(desktop) {
+      margin-bottom: 40px;
+    }
   }
 
   &__calc {
