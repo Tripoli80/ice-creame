@@ -84,7 +84,7 @@
 
     &.cards__item--rotated {        
         transform: rotateY(180deg);        
-    }             
+    }    
 }
 
 .cards__side {  
@@ -135,32 +135,42 @@
     &--back {
         transform: rotateY(180deg);
     }
-    
+
     &::before {
         content: '';
-        position: absolute;
-        top: -140px;
+        position: absolute;        
         left: 50%;
-        transform: translateX(-50%);
+        top: -140px;
         width: 280px;
         height: 280px;
+        transform: translateX(-50%) translateY(140px);
+        opacity: 0;       
+        transition: transform .5s $functional-cubic, opacity .5s $functional-cubic;
 
         @include mq(tablet-only) {
             top: -138px;
             width: 224px;
             height: 224px;
+            transform: translateX(-50%) translateY(138px);
         }
-
+        
         @include mq(desktop) {
             top: -261px;
             width: 394px;
             height: 394px;
+            transform: translateX(-50%) translateY(261px);
         }
-    }        
+    }
+
+    &--active::before {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        transition: transform .5s $functional-cubic .3s, opacity .5s $functional-cubic .3s;        
+    }         
 }
 
 .card-1 {
-    &.cards__side::before {
+    &.cards__side::before {        
         @include bgimg('../images/products/320-card-1', 'png');        
 
         @include mq(tablet-only) {
@@ -428,7 +438,7 @@
     box-shadow: inset rgba(0, 0, 0, .6) 0 -2px 5px, inset rgba(252, 255, 255, .7) 0 2px 5px, rgba(0, 0, 0, .8) 0 2px 5px -1px;    
     opacity: 0;
     visibility: hidden;
-    transition: all .3s ease-in-out;
+    transition: all .3s $functional-cubic;
 
     &:hover {
         background: $color-font-white;
@@ -445,12 +455,12 @@
     width: 24px;
     height: 24px;
     fill: $color-font-white;
-    transition: all .3s ease-in-out;
+    transition: fill .3s $functional-cubic;
 
     .btn-top:hover & {
         cursor: pointer;
         fill: $color-font-red;
-        transition: all .3s ease-in-out;
+        transition: fill .3s $functional-cubic;
     }
 }
 

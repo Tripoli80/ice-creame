@@ -4,7 +4,7 @@
         <h2 class="products__title section__title">products</h2>
         <ul class="products__cards cards">
             <li class="cards__item" data-card1>
-                <div class="cards__side cards__side--front card-1">
+                <div class="cards__side cards__side--front card-1 animItems">
                     <h3 class="cards__title">ice cream</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
                     <button class="cards__btn btn-circle" type="button" aria-label="card-flip-right" data-card1-btn-right>
@@ -28,7 +28,7 @@
                 </div>                
             </li>
             <li class="cards__item" data-card2>
-                <div class="cards__side cards__side--front card-2">
+                <div class="cards__side cards__side--front card-2 animItems">
                     <h3 class="cards__title">ice coffee</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
                     <button class="cards__btn btn-circle" type="button" aria-label="card-flip-right" data-card2-btn-right>
@@ -52,7 +52,7 @@
                 </div>
             </li>
             <li class="cards__item" data-card3>
-                <div class="cards__side cards__side--front card-3" >
+                <div class="cards__side cards__side--front card-3 animItems" >
                     <h3 class="cards__title">milkshakes</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et. dolore magna aliqua facilisis.</p>
@@ -94,9 +94,44 @@
         </svg>
     </button>       
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>//ice-cream animation
+    const animItems = document.querySelectorAll('.animItems');
 
-<script>
+    if (animItems.length > 0) {
+        window.addEventListener('scroll', animOnScroll);
+        function animOnScroll(params) {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('cards__side--active');
+                }
+                else {
+                    animItem.classList.remove('cards__side--active');
+                }
+            }
+        }
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+        }
+        setTimeout(() => {
+            animOnScroll();
+        }, 500);        
+    }
+</script>
+<script> //scroll btn script
     function scrollTo(to, duration = 700) {
             const
                 element = document.scrollingElement || document.documentElement,
