@@ -19,6 +19,8 @@ padding-right: 15px;
  }
 } 
 .customer__photos{
+background-position: 50% 50%;
+background-repeat: no-repeat; 
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 32px;
@@ -30,52 +32,80 @@ margin-bottom: 16px;
 }
 
 .customer__blockquote{
-  @media screen and (max-width: #{$tablet - 0.02}) {
-padding-top: 43px;
-padding-left: 65px;
-padding-right: 65px;
-padding-bottom: 31px;
+  position: relative;
+  background-color: #fafafa;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 43px 58px 26px 65px;
+  max-width: 620px;
+  
+    @media screen and(min-width:768px) {
+      max-width: 620px;
+      background-color: #fafafa;
+  
+      padding: 37px 55px 44px 50px;
+    }
+    @media screen and(min-width:1200px) {
+      max-width: 1034px;
+      background-color: #fafafa;
+  
+      padding: 47px 135px 39px;
+    }
   }
-background-color:#FAFAFA;
-@media screen and (min-width: $tablet) {
-padding-top: 37px;
-padding-left: 50px;
-padding-right: 50px;
-padding-bottom: 31px;
-}
-@media screen and (min-width: $desktop) {
-background-position: 26px 56px;
-}
-}
+  
+  .customer__blockquote::after {
+    content: '';
+    margin-top: 47px;
+    width: 32px;
+    height: 4px;
+  }
 
-.customer__blockquote{
-background-image: url(/images/customer_reviews/slm/blockquote.svg);
-background-repeat: no-repeat;
-background-position: 19px 55px;
-@media screen and (min-width: $tablet) {
-  background-position: 19px 55px;
-}
+.customer__svg{
+  background-image:url(/images/customer_reviews/slm/blockquote.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  top: 25px;
+  left: 52px;
+  @media screen and(min-width:768px) {
+    width: 54px;
+    top: 17px;
+    left: 20px;
+  }
 
-background-position: 26px 56px;
+  @media screen and(min-width:1200px) {
+    left: 105px;
+    top: 30px;
+  }
 }
 
 .customer__text{
-font-family: "DM Sans";
-font-weight: 500;
-font-size: 12px;
-line-height: 2.5;
-text-align: center;
-background-image: repeating-linear-gradient(transparent -5px, transparent 23px, #E1E1E1 25px);
-@include mq(tablet){
-font-size: 14px;
-line-height: 2.1;
-}
-@include mq(desktop){
-font-size: 16px;
-line-height: 1.86;
+ position: relative;
+  max-width: 514px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 31px;
+  text-align: center;
+
+  color: #000000;
+  background-image: repeating-linear-gradient(transparent -1px, transparent 23px, #e1e1e1 25px);
+  background-position-y: 8px;
+
+  @media screen and(min-width:768px) {
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.04em;
+    max-width: 514px;
+  }
+
+  @media screen and(min-width:1200px) {
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 750px;
+  }
 }
 
-}
 
 .customer__breadcrumb{
 margin: 0;
@@ -131,11 +161,4 @@ margin-bottom: 16px;
 
 // слік цсс
 
-.slick-img{
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  padding-top: 85px;
-  padding-right: 85px;
-  
-}
+
