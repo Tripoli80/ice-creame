@@ -89,10 +89,6 @@ background-size: contain;
     max-width: calc(100% - 70px);
 
     font-family: 'DM Sans';
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 1.62;
-
     color: $color-font-second;
 
     @media screen and (min-width: 400px) {
@@ -115,6 +111,10 @@ background-size: contain;
 
 .about__title{
           color: $color-font-main;
+
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 1.62;
           
             @include mq(tablet) {
               font-size: 14px;
@@ -123,17 +123,22 @@ background-size: contain;
           
           
             @include mq(desktop) {
+              font-size: 16px;
               letter-spacing: 0.04em;
             }
 }
 
 .about__text{
           margin-top: 24px;
+
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 1.62;
       
           @include mq(tablet) {
             margin-top: 20px;
       
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.76;
             letter-spacing: 0.04em;
           }
@@ -141,7 +146,7 @@ background-size: contain;
       
           @include mq(desktop) {
             margin-top: 32px;
-            font-size: 14px;
+
             line-height: 1.94;
           }
 }
