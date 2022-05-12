@@ -10,7 +10,7 @@
 }
 }
 
-.container{
+.customer__container{
 padding-left: 74px;
 padding-right: 74px;
 @include mq(mobile-only){
@@ -58,27 +58,27 @@ max-width: 620px;
 .customer__text::before{
 content: url('/images/customer_reviews/slm/blockquote.svg');
 position: absolute;
-top: -20px;
-left: -36px;
+top: 18px;
+left: 21px;
 @media screen and(min-width:768px) {
-top: -24px;
-left: -33px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:333px){
-top: -22px;
-left: -40px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:379px){
-top: -24px;
-left: -33px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:768px){
-top: -24px;
-left: -33px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:1200px){
-top: -24px;
-left: -33px;
+  top: 18px;
+  left: 21px;
 }
 }
 .customer__text{
