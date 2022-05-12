@@ -31,8 +31,7 @@
     }
 }
 
-.products__subtitle {    
-
+.products__subtitle {
     @include mq(tablet) {
         margin-bottom: 18px;        
     }
@@ -64,8 +63,8 @@
     
     &:not(:last-child) {
         @include mq(mobile-only) {
-                margin-bottom: 140px;
-            }              
+            margin-bottom: 140px;
+        }              
     }
 
     @include mq(mobile-only) {
@@ -85,7 +84,7 @@
 
     &.cards__item--rotated {        
         transform: rotateY(180deg);        
-    }             
+    }    
 }
 
 .cards__side {  
@@ -116,55 +115,70 @@
         min-height: 587px;
     }    
 
+    &--front {
+        @include mq(mobile-only) {
+            padding-left: calc((100% - 200px) / 2);
+            padding-right: calc((100% - 200px) / 2);
+        }
+        
+        @include mq(tablet-only) {
+            padding-left: 32px;
+            padding-right: 32px;
+        }
+
+        @include mq(desktop) {
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+    }
+
     &--back {
         transform: rotateY(180deg);
     }
-    
-    &::after {
+
+    &::before {
         content: '';
-        position: absolute;
-        top: -140px;
+        position: absolute;        
         left: 50%;
-        transform: translateX(-50%);
+        top: -140px;
         width: 280px;
         height: 280px;
+        transform: translateX(-50%) translateY(140px);
+        opacity: 0;       
+        transition: transform .5s $functional-cubic, opacity .5s $functional-cubic;
 
         @include mq(tablet-only) {
             top: -138px;
             width: 224px;
             height: 224px;
+            transform: translateX(-50%) translateY(138px);
         }
-
+        
         @include mq(desktop) {
             top: -261px;
             width: 394px;
             height: 394px;
+            transform: translateX(-50%) translateY(261px);
         }
-    }        
+    }
+
+    &--active::before {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        transition: transform .5s $functional-cubic .3s, opacity .5s $functional-cubic .3s;        
+    }         
 }
 
 .card-1 {
-    &.cards__side::after {
-        background-image: image-set(url("../images/products/320-card-1.png") 1x, url("../images/products/320-card-1@2x.png") 2x);
-        background-image: -webkit-image-set(url("../images/products/320-card-1.png") 1x, url("../images/products/320-card-1@2x.png") 2x);
-        
-        background-image: image-set(url("../images/products/webp/320-card-1.webp") 1x, url("../images/products/webp/320-card-1@2x.webp") 2x);
-        background-image: -webkit-image-set(url("../images/products/webp/320-card-1.webp") 1x, url("../images/products/webp/320-card-1@2x.webp") 2x);
+    &.cards__side::before {        
+        @include bgimg('../images/products/320-card-1', 'png');        
 
         @include mq(tablet-only) {
-            background-image: image-set(url("../images/products/768-card-1.png") 1x, url("../images/products/768-card-1@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/768-card-1.png") 1x, url("../images/products/768-card-1@2x.png") 2x);
-            
-            background-image: image-set(url("../images/products/webp/768-card-1.webp") 1x, url("../images/products/webp/768-card-1@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/768-card-1.webp") 1x, url("../images/products/webp/768-card-1@2x.webp") 2x);
+            @include bgimg('../images/products/768-card-1', 'png');           
         }
 
         @include mq(desktop) {
-            background-image: image-set(url("../images/products/1280-card-1.png") 1x, url("../images/products/1280-card-1@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/1280-card-1.png") 1x, url("../images/products/1280-card-1@2x.png") 2x);
-            
-            background-image: image-set(url("../images/products/webp/1280-card-1.webp") 1x, url("../images/products/webp/1280-card-1@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/1280-card-1.webp") 1x, url("../images/products/webp/1280-card-1@2x.webp") 2x);
+            @include bgimg('../images/products/1280-card-1', 'png');            
         }
     }
 
@@ -178,27 +192,15 @@
 }
 
 .card-2 {
-    &.cards__side::after {
-        background-image: image-set(url("../images/products/320-card-2.png") 1x, url("../images/products/320-card-2@2x.png") 2x);
-        background-image: -webkit-image-set(url("../images/products/320-card-2.png") 1x, url("../images/products/320-card-2@2x.png") 2x);
-
-        background-image: image-set(url("../images/products/webp/320-card-2.webp") 1x, url("../images/products/webp/320-card-2@2x.webp") 2x);
-        background-image: -webkit-image-set(url("../images/products/webp/320-card-2.webp") 1x, url("../images/products/webp/320-card-2@2x.webp") 2x);
-
+    &.cards__side::before {
+        @include bgimg('../images/products/320-card-2', 'png');
+        
         @include mq(tablet-only) {
-            background-image: image-set(url("../images/products/768-card-2.png") 1x, url("../images/products/768-card-2@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/768-card-2.png") 1x, url("../images/products/768-card-2@2x.png") 2x);
-
-            background-image: image-set(url("../images/products/webp/768-card-2.webp") 1x, url("../images/products/webp/768-card-2@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/768-card-2.webp") 1x, url("../images/products/webp/768-card-2@2x.webp") 2x);
+            @include bgimg('../images/products/768-card-2', 'png');
         }
-
+        
         @include mq(desktop) {
-            background-image: image-set(url("../images/products/1280-card-2.png") 1x, url("../images/products/1280-card-2@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/1280-card-2.png") 1x, url("../images/products/1280-card-2@2x.png") 2x);
-
-            background-image: image-set(url("../images/products/webp/1280-card-2.webp") 1x, url("../images/products/webp/1280-card-2@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/1280-card-2.webp") 1x, url("../images/products/webp/1280-card-2@2x.webp") 2x);
+            @include bgimg('../images/products/1280-card-2', 'png');
         }
     }
 
@@ -212,28 +214,16 @@
 }
 
 .card-3 {
-    &.cards__side::after {
-        background-image: image-set(url("../images/products/320-card-3.png") 1x, url("../images/products/320-card-3@2x.png") 2x);
-        background-image: -webkit-image-set(url("../images/products/320-card-3.png") 1x, url("../images/products/320-card-3@2x.png") 2x);
-
-        background-image: image-set(url("../images/products/webp/320-card-3.webp") 1x, url("../images/products/webp/320-card-3@2x.webp") 2x);
-        background-image: -webkit-image-set(url("../images/products/webp/320-card-3.webp") 1x, url("../images/products/webp/320-card-3@2x.webp") 2x);
-
-        @include mq(tablet-only) {
-            background-image: image-set(url("../images/products/768-card-3.png") 1x, url("../images/products/768-card-3@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/768-card-3.png") 1x, url("../images/products/768-card-3@2x.png") 2x);
-
-            background-image: image-set(url("../images/products/webp/768-card-3.webp") 1x, url("../images/products/webp/768-card-3@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/768-card-3.webp") 1x, url("../images/products/webp/768-card-3@2x.webp") 2x);
-        }
-
-        @include mq(desktop) {
-            background-image: image-set(url("../images/products/1280-card-3.png") 1x, url("../images/products/1280-card-3@2x.png") 2x);
-            background-image: -webkit-image-set(url("../images/products/1280-card-3.png") 1x, url("../images/products/1280-card-3@2x.png") 2x);
-
-            background-image: image-set(url("../images/products/webp/1280-card-3.webp") 1x, url("../images/products/webp/1280-card-3@2x.webp") 2x);
-            background-image: -webkit-image-set(url("../images/products/webp/1280-card-3.webp") 1x, url("../images/products/webp/1280-card-3@2x.webp") 2x);
-        }
+    &.cards__side::before {
+        @include bgimg('../images/products/320-card-3', 'png');
+        
+            @include mq(tablet-only) {
+                @include bgimg('../images/products/768-card-3', 'png');
+            }
+        
+            @include mq(desktop) {
+                @include bgimg('../images/products/1280-card-3', 'png');
+            }
     }
 
     &.cards__side--front {
@@ -264,20 +254,16 @@
         transform: translateX(50%);        
         content: '';
         width: 26px;
-        height: 6px;                
-        background-image: image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
-        background-image: -webkit-image-set(url("../images/products/three-circles.png") 1x, url("../images/products/three-circles@2x.png") 2x);
+        height: 6px;       
 
-        background-image: image-set(url("../images/products/webp/three-circles.webp") 1x, url("../images/products/webp/three-circles@2x.webp") 2x);
-        background-image: -webkit-image-set(url("../images/products/webp/three-circles.webp") 1x, url("../images/products/webp/three-circles@2x.webp") 2x);
+        @include bgimg('../images/products/three-circles', 'png');        
     }
 }
 
 .cards__desc {
     margin-bottom: 32px;
     margin-left: auto;
-    margin-right: auto;
-    max-width: 200px;
+    margin-right: auto;    
     font-family: $font-primary;
     font-weight: 700;
     font-size: 14px;
@@ -291,12 +277,7 @@
         max-width: 185px;
     }
 
-    @include mq(tablet-only) {
-        max-width: 160px;
-    }
-
-    @include mq(desktop) {
-        max-width: 241px;
+    @include mq(desktop) {        
         margin-bottom: 60px;
         font-size: 16px;
         line-height: 1.76;
@@ -442,3 +423,45 @@
     height: 32px;
     fill: $color-font-red;
 }
+
+.btn-top {
+    position: fixed;
+    @include flex-3in1;    
+    bottom: 30px;
+    right: -65px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    cursor: pointer;    
+    border-radius: 50%;    
+    background: $color-font-red radial-gradient(150% 100% at 50% 5px, rgba(255, 255, 255, .2), rgba(0, 0, 0, 0));
+    box-shadow: inset rgba(0, 0, 0, .6) 0 -2px 5px, inset rgba(252, 255, 255, .7) 0 2px 5px, rgba(0, 0, 0, .8) 0 2px 5px -1px;    
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s $functional-cubic;
+
+    &:hover {
+        background: $color-font-white;
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;        
+        right: 15px;
+    }
+}
+
+.btn-top__icon {    
+    width: 24px;
+    height: 24px;
+    fill: $color-font-white;
+    transition: fill .3s $functional-cubic;
+
+    .btn-top:hover & {
+        cursor: pointer;
+        fill: $color-font-red;
+        transition: fill .3s $functional-cubic;
+    }
+}
+
+

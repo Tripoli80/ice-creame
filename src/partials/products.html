@@ -1,15 +1,13 @@
 <section class="products section" id="products">
     <div class="container">
-        <h2 class="products__title section__title">
-            <span class="products__subtitle section__subtitle">100% natural</span>
-            products
-        </h2>
+        <p class="products__subtitle section__subtitle">100% natural</p>
+        <h2 class="products__title section__title">products</h2>
         <ul class="products__cards cards">
             <li class="cards__item" data-card1>
-                <div class="cards__side cards__side--front card-1">
+                <div class="cards__side cards__side--front card-1 animItems">
                     <h3 class="cards__title">ice cream</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
-                    <button class="cards__btn btn-circle" type="button" data-card1-btn-right>
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-right" data-card1-btn-right>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-right"></use>
                         </svg>
@@ -20,9 +18,9 @@
                     <p class="cards__desc">You flipped the card. Well done!</p>
                     <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
                         <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
-                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4" aria-label="get-a-promo-code">get a promo code</button>
                     </form>                    
-                    <button class="cards__btn btn-circle" type="button" data-card1-btn-left>
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-left" data-card1-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
                         </svg>
@@ -30,10 +28,10 @@
                 </div>                
             </li>
             <li class="cards__item" data-card2>
-                <div class="cards__side cards__side--front card-2" data-card2-btn-right>
+                <div class="cards__side cards__side--front card-2 animItems">
                     <h3 class="cards__title">ice coffee</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
-                    <button class="cards__btn btn-circle" type="button">
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-right" data-card2-btn-right>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-right"></use>
                         </svg>
@@ -44,9 +42,9 @@
                     <p class="cards__desc">You flipped the card. Well done!</p>
                     <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
                         <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
-                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4" aria-label="get-a-promo-code">get a promo code</button>
                     </form>
-                    <button class="cards__btn btn-circle" type="button" data-card2-btn-left>
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-left" data-card2-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
                         </svg>
@@ -54,11 +52,11 @@
                 </div>
             </li>
             <li class="cards__item" data-card3>
-                <div class="cards__side cards__side--front card-3" data-card3-btn-right>
+                <div class="cards__side cards__side--front card-3 animItems" >
                     <h3 class="cards__title">milkshakes</h3>
                     <p class="cards__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et. dolore magna aliqua facilisis.</p>
-                    <button class="cards__btn btn-circle" type="button">
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-right" data-card3-btn-right>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-right"></use>
                         </svg>
@@ -69,9 +67,9 @@
                     <p class="cards__desc">You flipped the card. Well done!</p>
                     <form class="cards__form promo-form js-speaker-form" name="promo-cod-form">
                         <input class="promo-form__input-email" type="email" name="promo-email" autocomplete="email" placeholder="E-mail">
-                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4">get a promo code</button>
+                        <button class="promo-form__btn js-open-modal" type="button" data-modal="4" aria-label="get-a-promo-code">get a promo code</button>
                     </form>
-                    <button class="cards__btn btn-circle" type="button" data-card3-btn-left>
+                    <button class="cards__btn btn-circle" type="button" aria-label="card-flip-left" data-card3-btn-left>
                         <svg class="btn-circle__icon">
                             <use href="/images/icons.svg#arrow-left"></use>
                         </svg>
@@ -83,11 +81,103 @@
     <div class="promo-modal modal" data-modal="4">
         <p class="promo-modal__title">congratulations</p>
         <p class="promo-modal__text">Promo code sent to your email</p>
-        <button class="promo-modal__btn js-modal-close" type="button">
+        <button class="promo-modal__btn js-modal-close" type="button" aria-label="products-close-modal-btn">
             <svg class="promo-modal__close-icon">
                 <use href="/images/icons.svg#icon-close_menu"></use>
             </svg>
         </button>        
     </div>
     <div class="overlay js-overlay-modal"></div>
+    <button class="btn-top" type="button" aria-label="btn-top-scroll">
+        <svg class="btn-top__icon">
+            <use href="/images/icons.svg#btn-top__icon"></use>
+        </svg>
+    </button>       
 </section>
+<script>//ice-cream animation
+    const animItems = document.querySelectorAll('.animItems');
+
+    if (animItems.length > 0) {
+        window.addEventListener('scroll', animOnScroll);
+        function animOnScroll(params) {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 4;
+
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+
+                if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('cards__side--active');
+                }
+                else {
+                    animItem.classList.remove('cards__side--active');
+                }
+            }
+        }
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+        }
+        setTimeout(() => {
+            animOnScroll();
+        }, 500);        
+    }
+</script>
+<script> //scroll btn script
+    function scrollTo(to, duration = 700) {
+            const
+                element = document.scrollingElement || document.documentElement,
+                start = element.scrollTop,
+                change = to - start,
+                startDate = +new Date(),
+                // t = current time
+                // b = start value
+                // c = change in value
+                // d = duration
+                easeInOutQuad = function (t, b, c, d) {
+                    t /= d / 2;
+                    if (t < 1) return c / 2 * t * t + b;
+                    t--;
+                    return -c / 2 * (t * (t - 2) - 1) + b;
+                },
+                animateScroll = function () {
+                    const currentDate = +new Date();
+                    const currentTime = currentDate - startDate;
+                    element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+                    if (currentTime < duration) {
+                        requestAnimationFrame(animateScroll);
+                    }
+                    else {
+                        element.scrollTop = to;
+                    }
+                };
+            animateScroll();
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            let btn = document.querySelector('.btn-top');
+            window.addEventListener('scroll', function () {
+                // Если прокрутили дальше 599px, показываем кнопку
+                if (pageYOffset > 100) {
+                    btn.classList.add('show');
+                    // Иначе прячем
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+
+            // При клике прокручиываем на самый верх
+            btn.onclick = function (click) {
+                click.preventDefault();
+                scrollTo(0, 400);
+            }
+        });
+</script>
