@@ -10,7 +10,8 @@
 }
 }
 
-.customer .container{
+.customer__container{
+
 padding-left: 74px;
 padding-right: 74px;
 @include mq(mobile-only){
@@ -38,6 +39,7 @@ margin-left: auto;
 margin-right: auto;
 padding: 37px 67px 20px 76px;
 max-width: 620px;
+margin-bottom: 16px;
 
 @media screen and(min-width:768px) {
   max-width: 620px;
@@ -49,7 +51,7 @@ max-width: 620px;
   max-width: 1034px;
   background-color: #fafafa;
 
-  padding:  47px 135px 39px;
+  padding:47px 135px 39px;
 }
 }
 
@@ -58,27 +60,27 @@ max-width: 620px;
 .customer__text::before{
 content: url('/images/customer_reviews/slm/blockquote.svg');
 position: absolute;
-top: -20px;
-left: -36px;
+top: 22px;
+left: 51px;
 @media screen and(min-width:768px) {
-top: -24px;
-left: -33px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:333px){
-top: -22px;
-left: -40px;
+  top: 18px;
+  left: 21px;
 }
 @media screen and(min-width:379px){
-top: -24px;
-left: -33px;
+  top: 19px;
+  left: 32px;
 }
 @media screen and(min-width:768px){
-top: -24px;
-left: -33px;
+  top: 17px;
+  left: 5px;
 }
 @media screen and(min-width:1200px){
-top: -24px;
-left: -33px;
+  top: 31px;
+  left: 90px;
 }
 }
 .customer__text{
@@ -93,8 +95,13 @@ background-image: repeating-linear-gradient(transparent -1px, transparent 23px, 
 @media screen and(min-width:333px){
 background-image: repeating-linear-gradient(transparent 0px, transparent 23px, #e1e1e1 25px);
 @media screen and(min-width:379px){
-  background-image: repeating-linear-gradient(transparent 0px, transparent 25px, #e1e1e1 28px)
+  background-image: repeating-linear-gradient(transparent -4px, transparent 24px, #e1e1e1 26px);
 }
+
+@media screen and(min-width:640px){
+  background-image: repeating-linear-gradient(transparent -2px, transparent 23px, #e1e1e1 26px);
+}
+
 @media screen and(min-width:768px){
 background-image: repeating-linear-gradient(transparent 0px, transparent 24px, #e1e1e1 27px);
 }  
@@ -120,7 +127,6 @@ max-width: 750px;
 }
 }
 
-
 .customer__breadcrumb{
 margin: 0;
 justify-content: center;
@@ -130,12 +136,6 @@ padding: 16px;
 list-style: none;  
 }
 
-.customer__item::before {
-display: inline-block;
-margin-right: 10px;
-color:$red-btn-bgc--active;
-content: "•";
-}
 
 
 .customer__comment{
@@ -148,29 +148,6 @@ margin-bottom: 32px;
 @include mq(mobile-only){
 margin-bottom: 16px;
 }
-}
-.customer__carusel{
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: center;
-}
-
-.customer__home{
-background-image: url(/images/customer_reviews/slm/home.svg);  
-background-repeat: no-repeat;
-background-position:center;
-margin-right: 18px;
-}
-
-.customer__items{
-background-image: url(/images/customer_reviews/slm/Ellipse.svg); 
-background-repeat: no-repeat;
-background-position:center;
-}
-
-.customer__home +.customer__items:not(:last-child) {
-margin-right: 18px;
 }
 
 // свайп цсс
@@ -206,7 +183,26 @@ height: 85px;
 background-image: url("/images/customer_reviews/slm/home.svg");
 background-size: cover;
 border-radius: unset;
-width: 15px;
-height: 15px;
+width: 12px;
+height: 11px;
 background-color: #fafafa;
 }
+
+
+.customer__carusel{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.customer__items{
+  background-image: url(/images/customer_reviews/slm/dots.svg); 
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+.customer__items:not(:last-child) {
+    margin-right: 18px; 
+  }
