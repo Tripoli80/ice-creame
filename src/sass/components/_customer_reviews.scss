@@ -1,26 +1,25 @@
 .customer.section {
    
-      @include section-class(40px, 0px);
-    
-    @include mq(tablet) {
-      @include section-class(80px, 80px);
-    }
-    @include mq(desktop) {
-      @include section-class(60px, 120px);
-    }
-  }
+  @include section-class(40px, 0px);
 
-.customer .container{
+@include mq(tablet) {
+  @include section-class(80px, 80px);
+}
+@include mq(desktop) {
+  @include section-class(60px, 120px);
+}
+}
+
+.container{
 padding-left: 74px;
 padding-right: 74px;
 @include mq(mobile-only){
 padding-left: 15px;
 padding-right: 15px;
- }
+}
 } 
+
 .customer__photos{
-background-position: 50% 50%;
-background-repeat: no-repeat; 
 margin-left: auto;
 margin-right: auto;
 margin-bottom: 32px;
@@ -28,82 +27,97 @@ width: 85px;
 height: 85px;
 @include mq(mobile){
 margin-bottom: 16px; 
- }
+}
 }
 
 .customer__blockquote{
-  position: relative;
-  background-color: #fafafa;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 43px 58px 26px 65px;
+
+position: relative;
+background-color: #fafafa;
+margin-left: auto;
+margin-right: auto;
+padding: 37px 67px 20px 76px;
+max-width: 620px;
+
+@media screen and(min-width:768px) {
   max-width: 620px;
-  
-    @media screen and(min-width:768px) {
-      max-width: 620px;
-      background-color: #fafafa;
-  
-      padding: 37px 55px 44px 50px;
-    }
-    @media screen and(min-width:1200px) {
-      max-width: 1034px;
-      background-color: #fafafa;
-  
-      padding: 47px 135px 39px;
-    }
-  }
-  
-  .customer__blockquote::after {
-    content: '';
-    margin-top: 47px;
-    width: 32px;
-    height: 4px;
-  }
+  background-color: #fafafa;
 
-.customer__svg{
-  background-image:url(/images/customer_reviews/slm/blockquote.svg);
-  background-repeat: no-repeat;
-  position: absolute;
-  width: 60px;
-  height: 40px;
-  top: 25px;
-  left: 52px;
-  @media screen and(min-width:768px) {
-    width: 54px;
-    top: 17px;
-    left: 20px;
-  }
+  padding: 37px 55px 44px 50px;
+}
+@media screen and(min-width:1200px) {
+  max-width: 1034px;
+  background-color: #fafafa;
 
-  @media screen and(min-width:1200px) {
-    left: 105px;
-    top: 30px;
-  }
+  padding:  47px 135px 39px;
+}
 }
 
+
+
+.customer__text::before{
+content: url('/images/customer_reviews/slm/blockquote.svg');
+position: absolute;
+top: -20px;
+left: -36px;
+@media screen and(min-width:768px) {
+top: -24px;
+left: -33px;
+}
+@media screen and(min-width:333px){
+top: -22px;
+left: -40px;
+}
+@media screen and(min-width:379px){
+top: -24px;
+left: -33px;
+}
+@media screen and(min-width:768px){
+top: -24px;
+left: -33px;
+}
+@media screen and(min-width:1200px){
+top: -24px;
+left: -33px;
+}
+}
 .customer__text{
- position: relative;
-  max-width: 514px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 31px;
-  text-align: center;
+max-width: 514px;
+font-weight: 500;
+font-size: 12px;
+line-height: 31px;
+text-align: center;
 
-  color: #000000;
-  background-image: repeating-linear-gradient(transparent -1px, transparent 23px, #e1e1e1 25px);
-  background-position-y: 8px;
+color: #000000;
+background-image: repeating-linear-gradient(transparent -1px, transparent 23px, #e1e1e1 25px);
+@media screen and(min-width:333px){
+background-image: repeating-linear-gradient(transparent 0px, transparent 23px, #e1e1e1 25px);
+@media screen and(min-width:379px){
+  background-image: repeating-linear-gradient(transparent 0px, transparent 25px, #e1e1e1 28px)
+}
+@media screen and(min-width:768px){
+background-image: repeating-linear-gradient(transparent 0px, transparent 24px, #e1e1e1 27px);
+}  
 
-  @media screen and(min-width:768px) {
-    font-size: 14px;
-    line-height: 30px;
-    letter-spacing: 0.04em;
-    max-width: 514px;
-  }
+@media screen and(min-width:1200px){
+background-image: repeating-linear-gradient(transparent 0px, transparent 21px, #e1e1e1 26px);
+}
+}
 
-  @media screen and(min-width:1200px) {
-    font-size: 16px;
-    line-height: 30px;
-    max-width: 750px;
-  }
+background-position-y: 8px;
+
+@media screen and(min-width:768px) {
+font-size: 14px;
+line-height: 30px;
+letter-spacing: 0.04em;
+max-width: 514px;
+}
+
+@media screen and(min-width:1200px) {
+font-size: 16px;
+line-height: 30px;
+max-width: 750px;
+}
 }
 
 
@@ -117,48 +131,82 @@ list-style: none;
 }
 
 .customer__item::before {
-    display: inline-block;
-    margin-right: 10px;
-    color:$red-btn-bgc--active;
-    content: "•";
-  }
+display: inline-block;
+margin-right: 10px;
+color:$red-btn-bgc--active;
+content: "•";
+}
 
 
-  .customer__comment{
-    text-align: center;
-    font-family: "DM Sans";
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 1.8;
-    margin-bottom: 32px;
-    @include mq(mobile-only){
+.customer__comment{
+text-align: center;
+font-family: "DM Sans";
+font-size: 14px;
+font-weight: 500;
+line-height: 1.8;
+margin-bottom: 32px;
+@include mq(mobile-only){
 margin-bottom: 16px;
-  }
-  }
-  .customer__carusel{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+}
+}
+.customer__carusel{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
 
-  .customer__home{
-    background-image: url(/images/customer_reviews/slm/home.svg);  
-    background-repeat: no-repeat;
-    background-position:center;
-    margin-right: 18px;
+.customer__home{
+background-image: url(/images/customer_reviews/slm/home.svg);  
+background-repeat: no-repeat;
+background-position:center;
+margin-right: 18px;
 }
 
 .customer__items{
-    background-image: url(/images/customer_reviews/slm/Ellipse.svg); 
-    background-repeat: no-repeat;
-    background-position:center;
+background-image: url(/images/customer_reviews/slm/Ellipse.svg); 
+background-repeat: no-repeat;
+background-position:center;
 }
 
 .customer__home +.customer__items:not(:last-child) {
-    margin-right: 18px;
+margin-right: 18px;
 }
 
-// слік цсс
+// свайп цсс
 
+.swiper-slide {
+text-align: center;
+/* Center slide text vertically */
+display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+-webkit-justify-content: center;
+justify-content: center;
+-webkit-box-align: center;
+-ms-flex-align: center;
+-webkit-align-items: center;
+align-items: center;
 
+}
+
+.swiper-wrapper{
+padding-bottom: 16px;
+}
+.swiper-slide img {
+display: block;
+width: 85px;
+height: 85px;
+}
+
+.swiper-pagination-bullet-active {
+background-image: url("/images/customer_reviews/slm/home.svg");
+background-size: cover;
+border-radius: unset;
+width: 15px;
+height: 15px;
+background-color: #fafafa;
+}
