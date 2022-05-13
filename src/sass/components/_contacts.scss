@@ -319,3 +319,22 @@
     min-width: 180px;
   }
 }
+
+.modal.map-modal {
+  width: 90vw;
+  height: 90vh;
+
+  &__map {
+    display: flex;
+    height: 500px;
+
+    margin-top: 20px;
+  }
+}
+
+.map-modal__map {
+  display: flex;
+  height: 100%;
+
+  margin-top: 20px;
+}
