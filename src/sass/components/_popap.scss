@@ -195,11 +195,6 @@
   font-weight: 400;
   font-family: $font-titel;
   line-height: 1.875;
-  // letter-spacing: 0.5em;
-  /* identical to box height, or 187% */
-  // align-items: center;
-
-  // text-align: right;
 }
 
 .modal-container__closed {
@@ -213,16 +208,12 @@
   top: 8px;
   right: 8px;
   border-radius: 50%;
-  // border: solid 1px;
+
   background-color: transparent;
-  // border-color: $color-font-red;
 }
 .modal-container__icon {
   width: 14px;
   height: 14px;
-  // transform: translateX(50%);
-  // transform: translateY(50%);
-
   fill: $color-font-second;
   transition-property: fill;
   @extend %trans;

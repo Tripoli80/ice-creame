@@ -4,15 +4,11 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
 @import './basis/var';
 @import './utils/mixin';
 @import './utils/placeholder';
-
-
 @import './basis/default';
 @import './basis/reset';
-
 @import './components/header';
 @import './components/hero';
 @import './components/products';
@@ -22,7 +18,6 @@
 @import './components/customer_reviews';
 @import './components/contacts';
 @import './components/footer';
-
 @import './components/title';
 
 // Buttons

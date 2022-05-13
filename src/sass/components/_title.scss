@@ -1,51 +1,47 @@
 .section__label,
-.section__subtitle {    
-    margin-bottom: 15px;
+.section__subtitle {
+  margin-bottom: 15px;
 
-    font-family: $font-titel;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.17;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-font-span;
+  font-family: $font-titel;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-font-span;
 
+  @include mq(tablet) {
+    margin-bottom: 16px;
 
+    font-size: 26px;
+    line-height: 1.15;
+  }
 
-    @include mq(tablet) {
-        margin-bottom: 16px;
+  @include mq(desktop) {
+    font-size: 30px;
+    line-height: 1.13;
 
-        font-size: 26px;
-        line-height: 1.15;
-    }
-
-    @include mq(desktop) {
-        font-size: 30px;
-        line-height: 1.13;
-
-        letter-spacing: 0.04em;
-    }
+    letter-spacing: 0.04em;
+  }
 }
 
 .section__title {
-    font-family: $font-titel;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $color-font-red;
+  font-family: $font-titel;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-font-red;
 
-    @include mq(tablet){
-        font-size: 48px;
-    }
+  @include mq(tablet) {
+    font-size: 48px;
+  }
 
-    @include mq(desktop){
-        font-size: 58px;
-        line-height: 1.14;
-        letter-spacing: 0.06em;
-    }
-    
-    
+  @include mq(desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
 }

@@ -1,467 +1,470 @@
 .section.products {
-    @include section-class(80px, 40px);    
+  @include section-class(80px, 40px);
 
-    @include mq(tablet) {
-        @include section-class(40px, 60px);        
-    }
+  @include mq(tablet) {
+    @include section-class(40px, 60px);
+  }
 
-    @include mq(desktop) {
-        @include section-class(60px, 60px);               
-    }
+  @include mq(desktop) {
+    @include section-class(60px, 60px);
+  }
 }
 
 .products {
-    @include mq(mobile-only) {
-        & .container {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+  @include mq(mobile-only) {
+    & .container {
+      padding-left: 20px;
+      padding-right: 20px;
     }
+  }
 }
 
 .products__title {
-    margin-bottom: 148px;
+  margin-bottom: 148px;
 
-    @include mq(tablet) {
-        margin-bottom: 154px;                     
-    }
+  @include mq(tablet) {
+    margin-bottom: 154px;
+  }
 
-    @include mq(desktop) {
-        margin-bottom: 261px;        
-    }
+  @include mq(desktop) {
+    margin-bottom: 261px;
+  }
 }
 
 .products__subtitle {
-    @include mq(tablet) {
-        margin-bottom: 18px;        
-    }
+  @include mq(tablet) {
+    margin-bottom: 18px;
+  }
 
-    @include mq(desktop) {
-        margin-bottom: 16px;        
-    }
+  @include mq(desktop) {
+    margin-bottom: 16px;
+  }
 }
 
-.cards {        
-    width: 100%;
-    height: 100%;    
+.cards {
+  width: 100%;
+  height: 100%;
 
-    @include mq(tablet) {
-        display: flex;            
-        gap: 16px;
-        justify-content: center;
-    }
+  @include mq(tablet) {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
 
-    @include mq(desktop) {
-        gap: 32px;
-    }
+  @include mq(desktop) {
+    gap: 32px;
+  }
 }
 
 .cards__item {
-    position: relative;     
-    transform-style: preserve-3d;      
-    transition: transform 1s $functional-cubic; 
-    
-    &:not(:last-child) {
-        @include mq(mobile-only) {
-            margin-bottom: 140px;
-        }              
-    }
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s $functional-cubic;
 
+  &:not(:last-child) {
     @include mq(mobile-only) {
-        max-width: 450px;
-        min-height: 493px;
+      margin-bottom: 140px;
     }
-    
-    @include mq(tablet-only) {
-        width: 224px;
-        min-height: 472px;
-    }
+  }
 
-    @include mq(desktop) {
-        width: 394px;
-        min-height: 587px;
-    }
+  @include mq(mobile-only) {
+    max-width: 450px;
+    min-height: 493px;
+  }
 
-    &.cards__item--rotated {        
-        transform: rotateY(180deg);        
-    }    
+  @include mq(tablet-only) {
+    width: 224px;
+    min-height: 472px;
+  }
+
+  @include mq(desktop) {
+    width: 394px;
+    min-height: 587px;
+  }
+
+  &.cards__item--rotated {
+    transform: rotateY(180deg);
+  }
 }
 
-.cards__side {  
-    position: absolute;        
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    padding-top: 160px;
-    padding-bottom: 40px;    
-    border-radius: 24px;    
-    backface-visibility: hidden;     
-    
-    @include mq(mobile-only) {            
-        min-height: 493px;
+.cards__side {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 160px;
+  padding-bottom: 40px;
+  border-radius: 24px;
+  backface-visibility: hidden;
+
+  @include mq(mobile-only) {
+    min-height: 493px;
+  }
+
+  @include mq(tablet-only) {
+    padding-top: 118px;
+    width: 224px;
+    min-height: 472px;
+  }
+
+  @include mq(desktop) {
+    padding-top: 165px;
+    padding-bottom: 60px;
+    width: 394px;
+    min-height: 587px;
+  }
+
+  &--front {
+    @include mq(mobile-only) {
+      padding-left: calc((100% - 200px) / 2);
+      padding-right: calc((100% - 200px) / 2);
     }
-    
+
     @include mq(tablet-only) {
-        padding-top: 118px;
-        width: 224px;
-        min-height: 472px;
+      padding-left: 32px;
+      padding-right: 32px;
     }
-    
+
     @include mq(desktop) {
-        padding-top: 165px;
-        padding-bottom: 60px;
-        width: 394px;
-        min-height: 587px;
-    }    
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
 
-    &--front {
-        @include mq(mobile-only) {
-            padding-left: calc((100% - 200px) / 2);
-            padding-right: calc((100% - 200px) / 2);
-        }
-        
-        @include mq(tablet-only) {
-            padding-left: 32px;
-            padding-right: 32px;
-        }
+  &--back {
+    transform: rotateY(180deg);
+  }
 
-        @include mq(desktop) {
-            padding-left: 75px;
-            padding-right: 75px;
-        }
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -140px;
+    width: 280px;
+    height: 280px;
+    transform: translateX(-50%) translateY(140px);
+    opacity: 0;
+    transition: transform 0.5s $functional-cubic, opacity 0.5s $functional-cubic;
+
+    @include mq(tablet-only) {
+      top: -138px;
+      width: 224px;
+      height: 224px;
+      transform: translateX(-50%) translateY(138px);
     }
 
-    &--back {
-        transform: rotateY(180deg);
+    @include mq(desktop) {
+      top: -261px;
+      width: 394px;
+      height: 394px;
+      transform: translateX(-50%) translateY(261px);
     }
+  }
 
-    &::before {
-        content: '';
-        position: absolute;        
-        left: 50%;
-        top: -140px;
-        width: 280px;
-        height: 280px;
-        transform: translateX(-50%) translateY(140px);
-        opacity: 0;       
-        transition: transform .5s $functional-cubic, opacity .5s $functional-cubic;
-
-        @include mq(tablet-only) {
-            top: -138px;
-            width: 224px;
-            height: 224px;
-            transform: translateX(-50%) translateY(138px);
-        }
-        
-        @include mq(desktop) {
-            top: -261px;
-            width: 394px;
-            height: 394px;
-            transform: translateX(-50%) translateY(261px);
-        }
-    }
-
-    &--active::before {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-        transition: transform .5s $functional-cubic .3s, opacity .5s $functional-cubic .3s;        
-    }         
+  &--active::before {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    transition: transform 0.5s $functional-cubic 0.3s, opacity 0.5s $functional-cubic 0.3s;
+  }
 }
 
 .card-1 {
-    &.cards__side::before {        
-        @include bgimg('../images/products/320-card-1', 'png');        
+  &.cards__side::before {
+    @include bgimg('../images/products/320-card-1', 'png');
 
-        @include mq(tablet-only) {
-            @include bgimg('../images/products/768-card-1', 'png');           
-        }
-
-        @include mq(desktop) {
-            @include bgimg('../images/products/1280-card-1', 'png');            
-        }
+    @include mq(tablet-only) {
+      @include bgimg('../images/products/768-card-1', 'png');
     }
 
-    &.cards__side--front {
-        background-color: $card-1-front-bg;
+    @include mq(desktop) {
+      @include bgimg('../images/products/1280-card-1', 'png');
     }
+  }
 
-    &.cards__side--back {
-        background-color: $card-1-back-bg;
-    }
+  &.cards__side--front {
+    background-color: $card-1-front-bg;
+  }
+
+  &.cards__side--back {
+    background-color: $card-1-back-bg;
+  }
 }
 
 .card-2 {
-    &.cards__side::before {
-        @include bgimg('../images/products/320-card-2', 'png');
-        
-        @include mq(tablet-only) {
-            @include bgimg('../images/products/768-card-2', 'png');
-        }
-        
-        @include mq(desktop) {
-            @include bgimg('../images/products/1280-card-2', 'png');
-        }
+  &.cards__side::before {
+    @include bgimg('../images/products/320-card-2', 'png');
+
+    @include mq(tablet-only) {
+      @include bgimg('../images/products/768-card-2', 'png');
     }
 
-    &.cards__side--front {
-        background-color: $card-2-front-bg;
+    @include mq(desktop) {
+      @include bgimg('../images/products/1280-card-2', 'png');
     }
-    
-    &.cards__side--back {
-        background-color: $card-2-back-bg;
-    }
+  }
+
+  &.cards__side--front {
+    background-color: $card-2-front-bg;
+  }
+
+  &.cards__side--back {
+    background-color: $card-2-back-bg;
+  }
 }
 
 .card-3 {
-    &.cards__side::before {
-        @include bgimg('../images/products/320-card-3', 'png');
-        
-            @include mq(tablet-only) {
-                @include bgimg('../images/products/768-card-3', 'png');
-            }
-        
-            @include mq(desktop) {
-                @include bgimg('../images/products/1280-card-3', 'png');
-            }
+  &.cards__side::before {
+    @include bgimg('../images/products/320-card-3', 'png');
+
+    @include mq(tablet-only) {
+      @include bgimg('../images/products/768-card-3', 'png');
     }
 
-    &.cards__side--front {
-        background-color: $card-3-front-bg;
+    @include mq(desktop) {
+      @include bgimg('../images/products/1280-card-3', 'png');
     }
-    
-    &.cards__side--back {
-        background-color: $card-3-back-bg;
-    }
+  }
+
+  &.cards__side--front {
+    background-color: $card-3-front-bg;
+  }
+
+  &.cards__side--back {
+    background-color: $card-3-back-bg;
+  }
 }
 
 .cards__title {
-    position: relative;
-    margin-bottom: 70px;
-    font-family: $font-titel;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;    
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;    
-    color: $color-font-white;
+  position: relative;
+  margin-bottom: 70px;
+  font-family: $font-titel;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-font-white;
 
-    &::after {
-        position: absolute;
-        right: 50%;
-        bottom: -35px;
-        transform: translateX(50%);        
-        content: '';
-        width: 26px;
-        height: 6px;       
+  &::after {
+    position: absolute;
+    right: 50%;
+    bottom: -35px;
+    transform: translateX(50%);
+    content: '';
+    width: 26px;
+    height: 6px;
 
-        @include bgimg('../images/products/three-circles', 'png');        
-    }
+    @include bgimg('../images/products/three-circles', 'png');
+  }
 }
 
 .cards__desc {
-    margin-bottom: 32px;
-    margin-left: auto;
-    margin-right: auto;    
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;    
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: $color-font-white;
+  margin-bottom: 32px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $color-font-white;
 
-    .cards__side--back & {
-        margin-bottom: 16px;
-        max-width: 185px;
-    }
+  .cards__side--back & {
+    margin-bottom: 16px;
+    max-width: 185px;
+  }
 
-    @include mq(desktop) {        
-        margin-bottom: 60px;
-        font-size: 16px;
-        line-height: 1.76;
-    }
+  @include mq(desktop) {
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 1.76;
+  }
 }
 
 .promo-form {
-    @include flex-3in1;
-    flex-wrap: wrap;
-    width: 100%;       
+  @include flex-3in1;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .promo-form__input-email {
-    width: calc(100% - 80px);
-    padding: 2px 10px;
-    margin-bottom: 10px;
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;        
-    letter-spacing: 0.04em;
-    outline: none;
-    border-radius: 10px;
-    border: 2px solid transparent;    
-    transition: border-color .3s $functional-cubic;
+  width: calc(100% - 80px);
+  padding: 2px 10px;
+  margin-bottom: 10px;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  letter-spacing: 0.04em;
+  outline: none;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s $functional-cubic;
 
-    @include mq(tablet-only) {
-        width: calc(100% - 40px);
-    }
+  @include mq(tablet-only) {
+    width: calc(100% - 40px);
+  }
 
-    &:hover, &:focus {
-        border-color: $color-font-red;
-    }
+  &:hover,
+  &:focus {
+    border-color: $color-font-red;
+  }
 }
 
 .promo-form__btn {
-    padding: 5px 10px;    
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
-    letter-spacing: 0.04em;
-    color: $color-font-red;
-    border-radius: 10px;
-    background-color: $color-font-white;
-    transition: color .3s $functional-cubic, background-color .3s $functional-cubic;
+  padding: 5px 10px;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  letter-spacing: 0.04em;
+  color: $color-font-red;
+  border-radius: 10px;
+  background-color: $color-font-white;
+  transition: color 0.3s $functional-cubic, background-color 0.3s $functional-cubic;
 
-    &:hover, &:focus {
-        color: $color-font-white;
-        background-color: $color-font-red;
-    }
+  &:hover,
+  &:focus {
+    color: $color-font-white;
+    background-color: $color-font-red;
+  }
 }
 
 .btn-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;    
-    margin-left: auto;
-    margin-top: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    background-color: $color-font-white;    
-    transition: background-color .3s $functional-cubic, 
-    fill .3s $functional-cubic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  background-color: $color-font-white;
+  transition: background-color 0.3s $functional-cubic, fill 0.3s $functional-cubic;
 
-    &:hover, &:focus {
-        background-color: $color-font-red;        
-    }
+  &:hover,
+  &:focus {
+    background-color: $color-font-red;
+  }
 
-    &:hover .btn-circle__icon, 
-    &:focus .btn-circle__icon {
-        fill: $color-font-white;
-    }
+  &:hover .btn-circle__icon,
+  &:focus .btn-circle__icon {
+    fill: $color-font-white;
+  }
 }
 
 .btn-circle__icon {
-    width: 16px;
-    height: 16px;
-    fill: $color-font-red;
-    transition: fill .3s $functional-cubic;    
+  width: 16px;
+  height: 16px;
+  fill: $color-font-red;
+  transition: fill 0.3s $functional-cubic;
 
-    .btn-circle:hover &,
-    .btn-circle:focus & {
-        fill: $color-font-white;
-    }
+  .btn-circle:hover &,
+  .btn-circle:focus & {
+    fill: $color-font-white;
+  }
 }
 
 .modal {
-    .products & {
-        width: 50%;
-        height: 25%;
-        border-radius: 24px;
-        background-color: $section-color;
-    }
+  .products & {
+    width: 50%;
+    height: 25%;
+    border-radius: 24px;
+    background-color: $section-color;
+  }
 }
 
 .promo-modal {
-    position: relative;
-    @include flex-3in1;
-    flex-direction: column;    
+  position: relative;
+  @include flex-3in1;
+  flex-direction: column;
 }
 
 .promo-modal__title {
-    margin-bottom: 25px;
-    font-family: $font-titel;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.17;
-    text-align: center;
-    text-transform: uppercase;
-    color: $color-font-red;
+  margin-bottom: 25px;
+  font-family: $font-titel;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-font-red;
 }
 
 .promo-modal__text {
-    font-family: $font-primary;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: $color-font-red;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $color-font-red;
 }
 
 .promo-modal__btn {
-    @include flex-3in1;    
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    background-color: transparent;
-    transition: border-color .3s $functional-cubic;
+  @include flex-3in1;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: border-color 0.3s $functional-cubic;
 
-    &:hover, &:focus {
-        border-color: $color-font-red;
-    }
+  &:hover,
+  &:focus {
+    border-color: $color-font-red;
+  }
 }
 
-.promo-modal__close-icon {    
-    width: 32px;
-    height: 32px;
-    fill: $color-font-red;
+.promo-modal__close-icon {
+  width: 32px;
+  height: 32px;
+  fill: $color-font-red;
 }
 
 .btn-top {
-    position: fixed;
-    @include flex-3in1;    
-    bottom: 30px;
-    right: -65px;
-    width: 50px;
-    height: 50px;
-    z-index: 1000;
-    cursor: pointer;    
-    border-radius: 50%;    
-    background: $color-font-red radial-gradient(150% 100% at 50% 5px, rgba(255, 255, 255, .2), rgba(0, 0, 0, 0));
-    box-shadow: inset rgba(0, 0, 0, .6) 0 -2px 5px, inset rgba(252, 255, 255, .7) 0 2px 5px, rgba(0, 0, 0, .8) 0 2px 5px -1px;    
-    opacity: 0;
-    visibility: hidden;
-    transition: all .3s $functional-cubic;
+  position: fixed;
+  @include flex-3in1;
+  bottom: 30px;
+  right: -65px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  border-radius: 50%;
+  background: $color-font-red
+    radial-gradient(150% 100% at 50% 5px, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
+  box-shadow: inset rgba(0, 0, 0, 0.6) 0 -2px 5px, inset rgba(252, 255, 255, 0.7) 0 2px 5px,
+    rgba(0, 0, 0, 0.8) 0 2px 5px -1px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s $functional-cubic;
 
-    &:hover {
-        background: $color-font-white;
-    }
+  &:hover {
+    background: $color-font-white;
+  }
 
-    &.show {
-        opacity: 1;
-        visibility: visible;        
-        right: 15px;
-    }
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    right: 15px;
+  }
 }
 
-.btn-top__icon {    
-    width: 24px;
-    height: 24px;
-    fill: $color-font-white;
-    transition: fill .3s $functional-cubic;
+.btn-top__icon {
+  width: 24px;
+  height: 24px;
+  fill: $color-font-white;
+  transition: fill 0.3s $functional-cubic;
 
-    .btn-top:hover & {
-        cursor: pointer;
-        fill: $color-font-red;
-        transition: fill .3s $functional-cubic;
-    }
+  .btn-top:hover & {
+    cursor: pointer;
+    fill: $color-font-red;
+    transition: fill 0.3s $functional-cubic;
+  }
 }
-
-

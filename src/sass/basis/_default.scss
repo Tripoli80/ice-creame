@@ -14,7 +14,12 @@
   }
 }
 
-
+header,
+footer,
+section
+{
+  min-width: 320px;
+}
 
 .visually-hidden {
   position: absolute;
