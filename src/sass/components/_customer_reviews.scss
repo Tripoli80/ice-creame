@@ -38,7 +38,7 @@ margin-left: auto;
 margin-right: auto;
 padding: 37px 67px 20px 76px;
 max-width: 620px;
-margin-bottom: 16px;
+margin-bottom: 36px;
 
 @media screen and(min-width:768px) {
   max-width: 620px;
@@ -185,23 +185,14 @@ border-radius: unset;
 width: 12px;
 height: 11px;
 background-color: #fafafa;
+
 }
 
-
-.customer__carusel{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  
-}
-
-.customer__items{
-  background-image: url(/images/customer_reviews/slm/dots.svg); 
-  background-repeat: no-repeat;
-  background-position:center;
-}
-
-.customer__items:not(:last-child) {
-    margin-right: 18px; 
+  .customer__comment::before{
+   content: url(/images/customer_reviews/slm/dotss.svg); 
+   position: relative;
+   top: -24px;
+   left: 62px;
   }
+
+  
