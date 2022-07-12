@@ -21,4 +21,4 @@ var i=new Swiper(".swiper",{loop:!1,pagination:{el:".swiper-pagination",clickabl
 },{}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss"),require("./js/calc"),require("./js/flip"),require("./js/speaker"),require("./js/menu"),require("./js/modal"),require("./js/animItems"),require("./js/scrollTo"),require("./js/jquery.spincrement.min"),require("./js/swiper");
 },{"./sass/main.scss":"clu1","./js/calc":"QutR","./js/flip":"z9QZ","./js/speaker":"EoJx","./js/menu":"i0CD","./js/modal":"RSqK","./js/animItems":"w5Cz","./js/scrollTo":"p34n","./js/jquery.spincrement.min":"LdKI","./js/swiper":"lr0c"}]},{},["Focm"], null)
-//# sourceMappingURL=/ice-creame/src.9256b4c7.js.map
+//# sourceMappingURL=/ice-creame/src.cee3c317.js.map
